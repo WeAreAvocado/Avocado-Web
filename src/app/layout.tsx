@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { instrumentSerif, satoshiVariable } from "@/lib/fonts";
 import "./globals.css";
-import NavBar from "@/components/nav-bar";
+import NavBar from "./@nav-bar";
 
 export const metadata: Metadata = {
   title: "Avocado Tech",
@@ -25,4 +25,3 @@ export default function RootLayout({
     </html>
   );
 }
-

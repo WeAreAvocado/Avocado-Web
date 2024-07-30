@@ -1,4 +1,11 @@
 import Image from "next/image";
+import FeaturedOn from "./@featured-on";
+import Projects from "./@projects";
+import About from "./@about";
+import Services from "./@services";
+import Testimonials from "./@testimonials";
+import ContactUs from "./@contact-us";
+import Footer from "./@footer";
 
 export default function Home() {
   return (
@@ -47,6 +54,31 @@ export default function Home() {
           </button>
         </div>
       </div>
+
+      <div className="flex flex-col w-screen items-center max-w-screen-xl 2xl:max-w-screen-2xl m-auto">
+        {/* Featured On  */}
+        <FeaturedOn />
+
+        {/* Projects */}
+        <Projects />
+
+        {/* About */}
+        <About />
+
+        {/* Services */}
+        <Services />
+
+        {/* Testimonials */}
+        <Testimonials />
+
+        {/* Contact Us */}
+        <ContactUs />
+
+        {/* Footer */}
+        <Footer />
+      </div>
+
+      <div className="h-96" />
     </main>
   );
 }
