@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { instrumentSerif, satoshiVariable } from "@/lib/fonts";
 import "./globals.css";
-import NavBar from "./@nav_bar";
+import NavBar from "@/components/nav-bar";
 
 export const metadata: Metadata = {
   title: "Avocado Tech",

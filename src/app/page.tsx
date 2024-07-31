@@ -1,12 +1,12 @@
 import Image from "next/image";
-import FeaturedOn from "./@featured_on";
-import Projects from "./@projects";
-import About from "./@about";
-import Services from "./@services";
-import Testimonials from "./@testimonials";
-import Footer from "./@footer";
-import BookACall from "./@book_a_call";
-import ContactUs from "./@contact_us";
+import FeaturedOn from "@/components/featured-on";
+import Projects from "@/components/projects";
+import About from "@/components/about";
+import Services from "@/components/services";
+import Testimonials from "@/components/testimonials";
+import Footer from "@/components/footer";
+import BookACall from "@/components/book-a-call";
+import ContactUs from "@/components/contact-us";
 
 export default function Home() {
   return (
