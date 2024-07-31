@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   description: "Avocado Tech",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+interface IProp {
   children: React.ReactNode;
-}>) {
+}
+
+export default function RootLayout({ children }: IProp) {
   return (
     <html
       lang="en"

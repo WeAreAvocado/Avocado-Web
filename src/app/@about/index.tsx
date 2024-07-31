@@ -12,7 +12,7 @@ const About = () => {
         are
       </div>
 
-      <div className="w-full from-[#8D9853] to-[#2E321B] rounded-2xl bg-gradient-to-br py-16 px-24 relative flex flex-col gap-12">
+      <div className="w-full from-[#8D9853] to-[#2E321B] rounded-2xl bg-gradient-to-br py-16 px-24 2xl:px-44 2xl:py-24 relative flex flex-col gap-12">
         <span className="flex items-center gap-1 text-lg font-semibold">
           <GoDotFill size={25} />
           Introduction
