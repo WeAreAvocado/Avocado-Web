@@ -6,6 +6,7 @@ import Services from "./@services";
 import Testimonials from "./@testimonials";
 import ContactUs from "./@contact-us";
 import Footer from "./@footer";
+import BookACall from "./@book-a-call";
 
 export default function Home() {
   return (
@@ -55,7 +56,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col w-screen items-center max-w-screen-xl 2xl:max-w-screen-2xl m-auto">
+      <div className="flex flex-col w-screen items-center max-w-screen-xl 2xl:max-w-screen-2xl m-auto gap-56">
         {/* Featured On  */}
         <FeaturedOn />
 
@@ -71,14 +72,15 @@ export default function Home() {
         {/* Testimonials */}
         <Testimonials />
 
+        {/* Book a Call */}
+        <BookACall />
+
         {/* Contact Us */}
         <ContactUs />
 
         {/* Footer */}
         <Footer />
       </div>
-
-      <div className="h-96" />
     </main>
   );
 }

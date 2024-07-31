@@ -8,8 +8,8 @@ const NavBar = () => {
         <Link href="/" className="flex items-center gap-2">
           <Image
             className="object-cover"
-            src="/assets/logo-navbar.png"
-            alt="Next.js Logo"
+            src="/assets/logo/logo-small.png"
+            alt="Avocado Tech Logo"
             width={136}
             height={52}
             priority
