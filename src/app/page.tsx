@@ -1,12 +1,12 @@
 import Image from "next/image";
-import FeaturedOn from "./@featured-on";
+import FeaturedOn from "./@featured_on";
 import Projects from "./@projects";
 import About from "./@about";
 import Services from "./@services";
 import Testimonials from "./@testimonials";
-import ContactUs from "./@contact-us";
 import Footer from "./@footer";
-import BookACall from "./@book-a-call";
+import BookACall from "./@book_a_call";
+import ContactUs from "./@contact_us";
 
 export default function Home() {
   return (
