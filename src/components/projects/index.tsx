@@ -3,42 +3,8 @@ import { GoDotFill } from "react-icons/go";
 import { IoSpeedometer } from "react-icons/io5";
 import { FaPaintBrush } from "react-icons/fa";
 import { IoMdFingerPrint } from "react-icons/io";
-
-const projects = [
-  {
-    link: "",
-    name: "Tact Tik",
-    type: "Security App",
-    year: "2024",
-    description:
-      "Tact Tik is a security guard app developed by Avocado Tech for the Canadian market. The app features an easy-to-use UI, ideal for older users. Built with Flutter for native Android and iOS, it incorporates a guard tracking system using Mapbox, ensuring efficient and reliable security management.",
-    image: {
-      thumbnail: "/assets/projects/TactTik/thumbnail 1.png",
-    },
-  },
-  {
-    link: "",
-    name: "City2Guide",
-    type: "Travel Website",
-    year: "2024",
-    description:
-      "City2Guide, a travel website designed by Avocado Tech in Mumbai, India, targets travelers aged 22-50. This UI/UX project features a minimalist, clean design, enhancing user experience. Discover sophistication and seamless navigation, crafted for modern travel enthusiasts.",
-    image: {
-      thumbnail: "/assets/projects/City2Guide/thumbnail 1.png",
-    },
-  },
-  {
-    link: "",
-    name: "Ganesh Aarti",
-    type: "Devotional App",
-    year: "2024",
-    description:
-      "Avocado Tech's Ganesh Aarti app offers a beautifully readable format for all users, focusing on minimalistic design and functionality. Tailored for older individuals yet enjoyable for the younger generation, this Android-exclusive app ensures a seamless and enriching devotional experience.",
-    image: {
-      thumbnail: "/assets/projects/GaneshAarti/thumbnail 1.png",
-    },
-  },
-];
+import { PROJECTS } from "@/constants";
+import Link from "next/link";
 
 const Projects = () => {
   return (
@@ -62,13 +28,16 @@ const Projects = () => {
           <span className="text-3xl font-bold">Recent Projects</span>
 
           <div className="flex flex-col items-center gap-y-16">
-            {projects
-              .slice(0, Math.ceil(projects.length / 2))
-              .map((project, index) => (
-                <div className="w-11/12 space-y-8 group/project" key={index}>
+            {PROJECTS.slice(0, Math.ceil(PROJECTS.length / 2)).map(
+              (project, index) => (
+                <Link
+                  key={index}
+                  href={`/projects/${project.slug}`}
+                  className="w-11/12 space-y-8 group/project"
+                >
                   <div className="relative w-full m-auto h-96 group-hover/project:blur-sm ">
                     <Image
-                      src={project.image.thumbnail}
+                      src={`/assets/projects/${project.slug}/${project.image.thumbnail}`}
                       alt={project.name}
                       className="w-full h-full rounded-3xl object-cover"
                       fill
@@ -82,18 +51,23 @@ const Projects = () => {
                       <span className="text-sm">{project.type}</span>
                     </div>
                   </div>
-                </div>
-              ))}
+                </Link>
+              )
+            )}
           </div>
+
         </div>
         <div className="flex-1 flex flex-col items-center gap-y-16">
-          {projects
-            .slice(Math.ceil(projects.length / 2))
-            .map((project, index) => (
-              <div className="w-11/12 space-y-8 group/project" key={index}>
+          {PROJECTS.slice(Math.ceil(PROJECTS.length / 2)).map(
+            (project, index) => (
+              <Link
+                key={index}
+                href={`/projects/${project.slug}`}
+                className="w-11/12 space-y-8 group/project"
+              >
                 <div className="relative w-full m-auto h-96 group-hover/project:blur-sm ">
                   <Image
-                    src={project.image.thumbnail}
+                    src={`/assets/projects/${project.slug}/${project.image.thumbnail}`}
                     alt={project.name}
                     className="w-full h-full rounded-3xl object-cover"
                     fill
@@ -107,8 +81,9 @@ const Projects = () => {
                     <span className="text-sm">{project.type}</span>
                   </div>
                 </div>
-              </div>
-            ))}
+              </Link>
+            )
+          )}
         </div>
       </div>
       <div className="text-6xl font-bold mt-40">
