@@ -4,9 +4,9 @@ import Projects from "@/components/projects";
 import About from "@/components/about";
 import Services from "@/components/services";
 import Testimonials from "@/components/testimonials";
-import Footer from "@/components/footer";
 import BookACall from "@/components/book-a-call";
 import ContactUs from "@/components/contact-us";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -47,12 +47,18 @@ export default function Home() {
         </div>
 
         <div className="flex gap-10">
-          <button className="bg-white rounded-md text-brand font-bold px-10 py-3 text-lg border hover:border-transparent hover:outline hover:outline-4 duration-75 ease-in-out transition-all">
+          <Link
+            href="#contact-us"
+            className="bg-white rounded-md text-brand font-bold px-10 py-3 text-lg border hover:border-transparent hover:outline hover:outline-4 duration-75 ease-in-out transition-all"
+          >
             Contact Us
-          </button>
-          <button className="rounded-md text-brand font-bold px-10 py-3 text-lg border border-brand hover:border-transparent hover:outline hover:outline-4 duration-75 ease-in-out transition-all">
+          </Link>
+          <Link
+            href="#contact-us"
+            className="rounded-md text-brand font-bold px-10 py-3 text-lg border border-brand hover:border-transparent hover:outline hover:outline-4 duration-75 ease-in-out transition-all"
+          >
             Book a call
-          </button>
+          </Link>
         </div>
       </div>
       <video
@@ -65,7 +71,7 @@ export default function Home() {
         Your browser does not support the video tag.
       </video>
 
-      <div className="flex flex-col w-screen items-center max-w-screen-xl 2xl:max-w-screen-2xl m-auto gap-56">
+      <div className="flex flex-col w-screen items-center max-w-screen-xl 2xl:max-w-screen-2xl m-auto">
         {/* Featured On  */}
         <FeaturedOn />
 
@@ -86,9 +92,6 @@ export default function Home() {
 
         {/* Contact Us */}
         <ContactUs />
-
-        {/* Footer */}
-        <Footer />
       </div>
     </main>
   );

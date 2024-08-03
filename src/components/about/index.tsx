@@ -1,9 +1,10 @@
+import Link from "next/link";
 import { GoDotFill } from "react-icons/go";
 import { IoArrowForwardOutline } from "react-icons/io5";
 
 const About = () => {
   return (
-    <div className="flex flex-col items-center gap-16 w-full">
+    <div id="about" className="flex flex-col items-center gap-16 w-full pt-56">
       <button className="rounded-full font-bold px-10 py-3 text-lg border border-white ">
         About
       </button>
@@ -26,13 +27,19 @@ const About = () => {
           <span className="font-instrumentSerif italic">innovate</span> rapidly
           and effectively.
         </div>
-        <div className="flex gap-1 hover:flex-row-reverse hover:justify-end duration-300 ease-in-out transition-all">
-          <button className="p-3 bg-white rounded-xl text-black font-semibold text-lg">
+        <div className="flex w-fit gap-1 hover:flex-row-reverse hover:justify-end duration-300 ease-in-out transition-all">
+          <Link
+            href="#contact-us"
+            className="p-3 bg-white rounded-xl text-black font-semibold text-lg"
+          >
             Book a 15-min call
-          </button>
-          <button className="p-3 px-4 bg-white rounded-xl text-black font-semibold text-lg">
+          </Link>
+          <Link
+            href="#contact-us"
+            className="p-3 px-4 bg-white rounded-xl text-black font-semibold text-lg flex items-center"
+          >
             <IoArrowForwardOutline className="h-5 w-5" />
-          </button>
+          </Link>
         </div>
       </div>
     </div>

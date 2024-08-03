@@ -5,7 +5,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const ContactUs = () => {
   return (
-    <div className="flex flex-col items-center gap-16 w-full">
+    <div id="contact-us" className="flex flex-col items-center gap-16 w-full pt-56">
       <button className="rounded-full font-bold px-10 py-3 text-lg border border-white ">
         Contact Us
       </button>

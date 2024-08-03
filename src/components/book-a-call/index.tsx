@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const BookACall = () => {
   return (
-    <div className="2xl:w-3/4 w-11/12 h-[40rem] relative rounded-3xl overflow-hidden">
+    <div className="2xl:w-3/4 w-11/12 h-[40rem] relative rounded-3xl overflow-hidden mt-56">
       <Image
         className="object-cover rounded-3xl"
         src="/assets/book-a-call.png"
@@ -18,9 +19,12 @@ const BookACall = () => {
           If you want to achieve ground-breaking growth with increased sales and
           profitability with paid ads, then you&apos;re in the right place.
         </span>
-        <button className="bg-white w-fit rounded-md text-brand font-bold px-10 py-3 text-lg border hover:border-transparent hover:outline hover:outline-4 duration-75 ease-in-out transition-all">
+        <Link
+          href="#contact-us"
+          className="bg-white w-fit rounded-md text-brand font-bold px-10 py-3 text-lg border hover:border-transparent hover:outline hover:outline-4 duration-75 ease-in-out transition-all"
+        >
           Book a call
-        </button>
+        </Link>
       </div>
     </div>
   );

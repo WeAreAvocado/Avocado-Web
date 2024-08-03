@@ -7,7 +7,10 @@ import { TbCirclesRelation } from "react-icons/tb";
 
 const Services = () => {
   return (
-    <div className="flex flex-col items-center gap-16 w-full">
+    <div
+      id="services"
+      className="flex flex-col items-center gap-16 w-full pt-56"
+    >
       <button className="rounded-full font-bold px-10 py-3 text-lg border border-white ">
         Services
       </button>

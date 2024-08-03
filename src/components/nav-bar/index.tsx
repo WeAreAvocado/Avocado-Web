@@ -16,19 +16,19 @@ const NavBar = () => {
           />
         </Link>
         <nav className="flex gap-6">
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="#projects" className="flex items-center gap-2">
             Projects
           </Link>
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="#about" className="flex items-center gap-2">
             About
           </Link>
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="#services" className="flex items-center gap-2">
             Services
           </Link>
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="#testimonials" className="flex items-center gap-2">
             Testimonials
           </Link>
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="#contact-us" className="flex items-center gap-2">
             Contact
           </Link>
         </nav>
