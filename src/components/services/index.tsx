@@ -19,7 +19,7 @@ const Services = () => {
         <span className="font-instrumentSerif font-normal italic ">offer</span>
       </div>
 
-      <div className="flex gap-8 flex-wrap w-10/12 justify-center">
+      <div className="gap-8 grid grid-cols-3 w-10/12 justify-center">
         <div className="rounded-2xl flex flex-col gap-6 py-8 px-6 border border-[#6E6E6E] bg-[#0A0A0A] bg-opacity-50 w-80 h-60 group/service">
           <HiLightningBolt className="h-12 w-12 text-white flex-shrink-0 group-hover/service:text-[#FF4830]" />
           <div className="flex flex-col gap-4">
