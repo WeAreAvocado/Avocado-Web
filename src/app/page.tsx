@@ -55,6 +55,15 @@ export default function Home() {
           </button>
         </div>
       </div>
+      <video
+        className="h-full w-8/12 rounded-3xl m-auto mb-8"
+        autoPlay
+        muted
+        loop
+      >
+        <source src="/assets/videos/hero.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
       <div className="flex flex-col w-screen items-center max-w-screen-xl 2xl:max-w-screen-2xl m-auto gap-56">
         {/* Featured On  */}

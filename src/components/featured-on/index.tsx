@@ -34,7 +34,7 @@ const FeaturedOn = () => {
             key={index}
             src={item}
             alt="Featured On Image"
-            className="w-full"
+            className="w-full h-12"
           />
         ))}
       </Marquee>
