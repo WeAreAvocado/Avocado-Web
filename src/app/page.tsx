@@ -17,12 +17,12 @@ export default function Home() {
         {/* Background lines */}
         <div className="absolute inset-0">
           <div className="relative w-full h-[36rem] md:h-full select-none">
-            <Image
+            {/* <Image
               className="object-cover opacity-10"
               src="/assets/background-lines.png"
               alt="Next.js Logo"
               fill
-            />
+            /> */}
           </div>
         </div>
         {/* Layer Blur light effect */}
