@@ -4,6 +4,7 @@ import { FaBookOpen } from "react-icons/fa";
 import { TbLayoutCardsFilled } from "react-icons/tb";
 import { PiStarFourFill } from "react-icons/pi";
 import { TbCirclesRelation } from "react-icons/tb";
+import Image from "next/image";
 
 const Services = () => {
   return (
@@ -96,7 +97,14 @@ const Services = () => {
       </div>
       <div className="w-full bg-[#121212] rounded-2xl py-8 px-12 sm:py-16 sm:px-24 lg:py-28 lg:px-36 grid grid-cols-1 sm:grid-cols-2 gap-12 sm:gap-16 lg:gap-20">
         <div className="flex flex-col justify-center gap-4 w-full">
-          <div className="h-16 w-16 rounded-2xl bg-brand mb-2" />
+          <div className="flex justify-center items-center h-16 w-16 rounded-2xl bg-brand mb-2">
+            <Image
+              src="/assets/services/1.png"
+              alt="Logo"
+              height={40}
+              width={30}
+            />
+          </div>
           <span className="text-xl font-bold">Experienced Team</span>
           <span className="text-md sm:text-lg font-medium text-[#6E6E6E]">
             Benefit from our seasoned team&apos;s wealth of expertise and
@@ -104,7 +112,14 @@ const Services = () => {
           </span>
         </div>
         <div className="flex flex-col justify-center gap-4 w-full">
-          <div className="h-16 w-16 rounded-2xl bg-brand mb-2" />
+          <div className="flex justify-center items-center h-16 w-16 rounded-2xl bg-brand mb-2">
+            <Image
+              src="/assets/services/2.png"
+              alt="Logo"
+              height={40}
+              width={30}
+            />
+          </div>
           <span className="text-xl font-bold">Customized Solution</span>
           <span className="text-md sm:text-lg font-medium text-[#6E6E6E]">
             Tailored design services to meet your unique branding needs and
@@ -112,7 +127,14 @@ const Services = () => {
           </span>
         </div>
         <div className="flex flex-col justify-center gap-4 w-full">
-          <div className="h-16 w-16 rounded-2xl bg-brand mb-2" />
+          <div className="flex justify-center items-center h-16 w-16 rounded-2xl bg-brand mb-2">
+            <Image
+              src="/assets/services/3.png"
+              alt="Logo"
+              height={40}
+              width={30}
+            />
+          </div>
           <span className="text-xl font-bold">Innovative Approach</span>
           <span className="text-md sm:text-lg font-medium text-[#6E6E6E]">
             Cutting-edge designs crafted to set your brand apart from the
@@ -120,7 +142,14 @@ const Services = () => {
           </span>
         </div>
         <div className="flex flex-col justify-center gap-4 w-full">
-          <div className="h-16 w-16 rounded-2xl bg-brand mb-2" />
+          <div className="flex justify-center items-center h-16 w-16 rounded-2xl bg-brand mb-2">
+            <Image
+              src="/assets/services/4.png"
+              alt="Logo"
+              height={40}
+              width={30}
+            />
+          </div>
           <span className="text-xl font-bold">Efficiency & Timeliness</span>
           <span className="text-md sm:text-lg font-medium text-[#6E6E6E]">
             We closely collaborate with you to ensure your vision exceeds

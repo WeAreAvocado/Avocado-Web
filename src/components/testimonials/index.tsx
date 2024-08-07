@@ -35,13 +35,21 @@ const Testimonials = () => {
       <button className="rounded-full font-bold px-6 py-2 text-center md:px-10 md:py-3 text-sm md:text-lg border border-white">
         Testimonials
       </button>
+
       <div className="text-2xl sm:text-5xl md:text-6xl font-bold">
+        We are collecting client{" "}
+        <span className="font-instrumentSerif font-normal italic ">
+          reviews.
+        </span>
+      </div>
+
+      {/* <div className="text-2xl sm:text-5xl md:text-6xl font-bold">
         Results speak for{" "}
         <span className="font-instrumentSerif font-normal italic ">
           themselves.
         </span>
-      </div>
-      <Marquee
+      </div> */}
+      {/* <Marquee
         fade={true}
         pauseOnHover={true}
         className="gap-[3rem] [--duration:10s] w-11/12 md:max-w-4xl 2xl:max-w-7xl motion-reduce:overflow-auto"
@@ -80,7 +88,7 @@ const Testimonials = () => {
             </div>
           </div>
         ))}
-      </Marquee>
+      </Marquee> */}
     </div>
   );
 };

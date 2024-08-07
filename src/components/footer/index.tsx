@@ -1,3 +1,4 @@
+import { LINKS } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -44,13 +45,25 @@ const Footer = () => {
           </div>
           <div className="flex flex-col gap-4">
             <span className="font-semibold text-md">FOLLOW US</span>
-            <Link className="opacity-70 text-sm" href="">
+            <Link
+              target="_blank"
+              className="opacity-70 text-sm"
+              href={LINKS.instagram}
+            >
               Instagram
             </Link>
-            <Link className="opacity-70 text-sm" href="">
+            <Link
+              target="_blank"
+              className="opacity-70 text-sm"
+              href={LINKS.linkedin}
+            >
               LinkedIn
             </Link>
-            <Link className="opacity-70 text-sm" href="">
+            <Link
+              target="_blank"
+              className="opacity-70 text-sm"
+              href={LINKS.twitter}
+            >
               Twitter
             </Link>
           </div>

@@ -5,12 +5,11 @@ import Link from "next/link";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { useFormStatus } from "react-dom";
 import { sendMail } from "./action";
 import { useFormState } from "react-dom";
 import { IInitialState } from "./types";
-import { useEffect } from "react";
-import { toast } from "sonner";
+import { useRef } from "react";
+import { LINKS } from "@/constants";
 
 const initialState: IInitialState = {
   message: "",
@@ -19,6 +18,7 @@ const initialState: IInitialState = {
 
 const ContactUs = () => {
   const [state, formAction] = useFormState(sendMail, initialState);
+  const ref = useRef<HTMLFormElement>(null);
 
   return (
     <div
@@ -42,10 +42,10 @@ const ContactUs = () => {
             <div className="flex flex-col">
               <span className="text-base text-[#B8B8B8]">Email:</span>
               <Link
-                href="mailto:work@avocadotech.in"
+                href="mailto:alotavocados@gmail.com"
                 className="font-semibold text-xl"
               >
-                work@avocadotech.in
+                alotavocados@gmail.com
               </Link>
             </div>
             <div className="flex flex-col">
@@ -65,20 +65,27 @@ const ContactUs = () => {
           <div className="flex flex-col gap-2">
             <span className="text-base text-[#B8B8B8]">Follow us:</span>
             <span className="flex gap-4">
-              <Link href="https://www.instagram.com/avocadotech.in">
+              <Link target="_blank" href={LINKS.instagram}>
                 <FaInstagram size={21} />
               </Link>
-              <Link href="https://www.linkedin.com/company/avocado-tech-services-pvt/">
+              <Link target="_blank" href={LINKS.linkedin}>
                 <FaLinkedinIn size={21} />
               </Link>
-              <Link href="https://x.com/alotavocados">
+              <Link target="_blank" href={LINKS.twitter}>
                 <FaXTwitter size={21} />
               </Link>
             </span>
           </div>
         </div>
 
-        <form action={formAction} className="grid grid-cols-2 flex-1 gap-8">
+        <form
+          action={async (formData) => {
+            formAction(formData);
+            ref.current?.reset();
+          }}
+          ref={ref}
+          className="grid grid-cols-2 flex-1 gap-8"
+        >
           <div className="flex flex-1 flex-col gap-2 col-span-2 md:col-span-1">
             <span className="text-base text-white font-semibold">Name</span>
             <input

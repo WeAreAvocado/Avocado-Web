@@ -54,3 +54,9 @@ export const PROJECTS = [
     },
   },
 ];
+
+export const LINKS = {
+  linkedin: "https://www.linkedin.com/company/avocado-tech-services-pvt/",
+  instagram: "https://www.instagram.com/avocadotech.in",
+  twitter: "https://x.com/alotavocados/",
+};
