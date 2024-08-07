@@ -46,7 +46,7 @@ export const sendMail = async (prevState: any, formData: FormData) => {
 
     const data = {
       from: `Avocado Tech <avocado@krishnaaa.com>`,
-      to: "work@avocadotech.in",
+      to: "alotavocados@gmail.com",
       subject: `🚀 New Message from ${name} | Avocado Tech`,
       html: `
           <p>Name:         ${name}</p>

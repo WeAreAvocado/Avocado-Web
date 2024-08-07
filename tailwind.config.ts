@@ -7,6 +7,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        "spin-slow": "spin 5s linear infinite",
+      },
+      keyframes: {
+        spin: {
+          to: {
+            transform: "rotate(360deg)",
+          },
+        },
+      },
       screens: {
         xs: "480px",
       },

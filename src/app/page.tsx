@@ -31,6 +31,58 @@ export default function Home() {
         </div>
       </div>
 
+      {/* <div className="">
+        <Image
+          src="/assets/hero-section/2.png"
+          alt="Avocado Tech"
+          width={120}
+          height={120}
+          className="absolute top-32 left-20"
+        />
+        <Image
+          src="/assets/hero-section/1.png"
+          alt="Avocado Tech"
+          width={120}
+          height={120}
+          className="absolute top-[20rem] left-32 animate-spin-slow"
+        />
+        <Image
+          src="/assets/hero-section/3.png"
+          alt="Avocado Tech"
+          width={130}
+          height={130}
+          className="absolute top-[14rem] -right-4"
+        />
+        <Image
+          src="/assets/hero-section/4.png"
+          alt="Avocado Tech"
+          width={150}
+          height={150}
+          className="absolute top-[40rem] left-[2rem]"
+        />
+        <Image
+          src="/assets/hero-section/5.png"
+          alt="Avocado Tech"
+          width={150}
+          height={150}
+          className="absolute top-[38rem] right-[12rem]"
+        />
+        <Image
+          src="/assets/hero-section/6.png"
+          alt="Avocado Tech"
+          width={120}
+          height={120}
+          className="absolute top-[24rem] right-[8rem]"
+        />
+        <Image
+          src="/assets/hero-section/7.png"
+          alt="Avocado Tech"
+          width={200}
+          height={200}
+          className="absolute top-[32rem] left-[14rem] hover:scale-110 duration-150 ease-in transition-all"
+        />
+      </div> */}
+
       {/* Nav Bar */}
       <div className="sm:hidden">
         <NavBarMobile />
