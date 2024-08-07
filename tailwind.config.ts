@@ -7,13 +7,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "480px",
+      },
       fontFamily: {
-        satoshiVariable: ['var(--font-satoshi-variable)'],
-        instrumentSerif: ['var(--font-instrument-serif)'],
+        satoshiVariable: ["var(--font-satoshi-variable)"],
+        instrumentSerif: ["var(--font-instrument-serif)"],
       },
       colors: {
-        "brand": "#8D9853"
-      }
+        brand: "#8D9853",
+      },
     },
   },
   plugins: [],

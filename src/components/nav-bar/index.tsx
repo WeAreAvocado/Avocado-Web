@@ -3,8 +3,8 @@ import Link from "next/link";
 
 const NavBar = () => {
   return (
-    <div className="fixed w-full flex justify-center bg-red z-50 top-6">
-      <div className="border border-[#AAAAAA] rounded-full py-1.5 px-6 flex items-center max-w-3xl w-7/12 justify-between m-auto overflow-hidden backdrop-blur-md">
+    <div className="fixed w-full hidden sm:flex justify-center z-50 top-6">
+      <div className="border border-[#AAAAAA] rounded-full py-1.5 px-6 flex items-center max-w-3xl sm:w-11/12 md:w-9/12 lg:w-7/12 justify-between m-auto overflow-hidden backdrop-blur-md">
         <Link href="/" className="flex items-center gap-2">
           <Image
             className="object-cover"

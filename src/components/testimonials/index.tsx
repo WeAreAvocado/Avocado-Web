@@ -30,12 +30,12 @@ const Testimonials = () => {
   return (
     <div
       id="testimonials"
-      className="flex flex-col items-center gap-16 w-full pt-56"
+      className="flex flex-col items-center gap-16 w-full pt-36 md:pt-56"
     >
-      <button className="rounded-full font-bold px-10 py-3 text-lg border border-white ">
+      <button className="rounded-full font-bold px-6 py-2 text-center md:px-10 md:py-3 text-sm md:text-lg border border-white">
         Testimonials
       </button>
-      <div className="text-6xl font-bold">
+      <div className="text-2xl sm:text-5xl md:text-6xl font-bold">
         Results speak for{" "}
         <span className="font-instrumentSerif font-normal italic ">
           themselves.
@@ -44,21 +44,21 @@ const Testimonials = () => {
       <Marquee
         fade={true}
         pauseOnHover={true}
-        className="gap-[3rem] [--duration:10s] motion-reduce:overflow-auto max-w-screen-xl 2xl:max-w-screen-2xl"
+        className="gap-[3rem] [--duration:10s] w-11/12 md:max-w-4xl 2xl:max-w-7xl motion-reduce:overflow-auto"
         innerClassName="gap-[3rem] [--gap:3rem] motion-reduce:animate-none motion-reduce:first:hidden"
       >
         {testimonials.map((item, index) => (
           <div
             key={item.name}
-            className="rounded-2xl flex flex-col gap-12 p-6 border border-[#6E6E6E] w-96  bg-[#0D0D0D]"
+            className="rounded-2xl flex flex-col gap-8 sm:gap-12 p-4 sm:p-6 border border-[#6E6E6E] w-96 bg-[#0D0D0D]"
           >
             <div className="flex gap-2">
               {Array.from({ length: 5 }, (_, i) => (
-                <FaStar key={i} className="w-5 h-5" />
+                <FaStar key={i} className="w-4 h-4 sm:w-5 sm:h-5" />
               ))}
             </div>
 
-            <div className="text-xl text-[#AFAFAF]">
+            <div className="text-lg sm:text-xl text-[#AFAFAF]">
               &quot;{item.message}&quot;
             </div>
 
@@ -74,7 +74,7 @@ const Testimonials = () => {
                 />
                 <div className="flex flex-col">
                   <span className="font-semibold text-lg">{item.name}</span>
-                  <span className="text-[#6E6E6E]">{item.designation}</span>
+                  <span className="text-[#6E6E6E] text-sm">{item.designation}</span>
                 </div>
               </div>
             </div>

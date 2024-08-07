@@ -7,15 +7,16 @@ import Testimonials from "@/components/testimonials";
 import BookACall from "@/components/book-a-call";
 import ContactUs from "@/components/contact-us";
 import Link from "next/link";
+import NavBarMobile from "@/components/nav-bar-mobile";
 
 export default function Home() {
   return (
-    <main className="relative">
+    <main className="relative overflow-hidden">
       {/* Background Container */}
       <div className="absolute -z-50 w-screen min-h-screen">
         {/* Background lines */}
         <div className="absolute inset-0">
-          <div className="relative w-full h-full select-none">
+          <div className="relative w-full h-[36rem] md:h-full select-none">
             <Image
               className="object-cover opacity-10"
               src="/assets/background-lines.png"
@@ -26,21 +27,26 @@ export default function Home() {
         </div>
         {/* Layer Blur light effect */}
         <div className="absolute w-full flex items-center justify-center select-none -top-[25rem]">
-          <div className="w-[51rem] h-[51rem] flex-shrink-0 rounded-full bg-brand bg-opacity-60 filter blur-[250px]" />
+          <div className="w-[48rem] h-[48rem] flex-shrink-0 rounded-full bg-brand bg-opacity-60 filter blur-[250px]" />
         </div>
       </div>
 
+      {/* Nav Bar */}
+      <div className="sm:hidden">
+        <NavBarMobile />
+      </div>
+
       {/* Hero Section */}
-      <div className="min-h-screen w-screen flex flex-col items-center pt-72 2xl:pt-80 gap-24 2xl:gap-32 z-50">
-        <div className="flex flex-col items-center justify-center gap-6 2xl:gap-10">
-          <div className="font-semibold text-6xl flex flex-col items-center justify-center">
+      <div className="h-[36rem] md:h-screen w-screen flex flex-col items-center pt-32 md:pt-64 2xl:pt-80 gap-24 2xl:gap-32 z-50">
+        <div className="flex flex-col items-center justify-center gap-6 2xl:gap-10 px-4">
+          <div className="font-semibold text-3xl sm:text-4xl  text-center md:text-6xl flex flex-col items-center justify-center">
             <span>
               Ready to{" "}
               <span className="font-instrumentSerif italic">scale</span> your
             </span>
             <span>brand with Avocado Tech?</span>
           </div>
-          <div className="text-xl max-w-lg text-center text-[#FFFFFF]/60 font-extralight">
+          <div className="text-md md:text-xl max-w-lg text-center text-[#FFFFFF]/60 font-extralight">
             Empowering startups with award-winning design solutions to stand out
             in the market and thrive.
           </div>
@@ -49,20 +55,21 @@ export default function Home() {
         <div className="flex gap-10">
           <Link
             href="#contact-us"
-            className="bg-white rounded-md text-brand font-bold px-10 py-3 text-lg border hover:border-transparent hover:outline hover:outline-4 duration-75 ease-in-out transition-all"
+            className="bg-white rounded-md text-brand font-bold px-6 py-2 text-center md:px-10 md:py-3 text-sm md:text-lg border hover:border-transparent hover:outline hover:outline-4 duration-75 ease-in-out transition-all"
           >
             Contact Us
           </Link>
           <Link
             href="#contact-us"
-            className="rounded-md text-brand font-bold px-10 py-3 text-lg border border-brand hover:border-transparent hover:outline hover:outline-4 duration-75 ease-in-out transition-all"
+            className="rounded-md text-brand font-bold px-6 py-2 text-center md:px-10 md:py-3 text-sm md:text-lg border border-brand hover:border-transparent hover:outline hover:outline-4 duration-75 ease-in-out transition-all"
           >
             Book a call
           </Link>
         </div>
       </div>
+
       <video
-        className="h-full w-8/12 rounded-3xl m-auto mb-8"
+        className="h-full w-5/6 md:w-8/12 rounded-3xl m-auto my-8"
         autoPlay
         muted
         loop

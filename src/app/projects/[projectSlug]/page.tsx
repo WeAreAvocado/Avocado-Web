@@ -15,21 +15,29 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
     throw new Error(`Project not found : ${projectSlug}`);
   }
   return (
-    <div className="mt-44 flex flex-col gap-20 items-center max-w-screen-xl 2xl:max-w-screen-2xl m-auto">
+    <div className="mt-32 md:mt-44 flex flex-col gap-12 md:gap-20 items-center max-w-screen-xl 2xl:max-w-screen-2xl m-auto px-4">
       <nav className="flex items-center justify-between gap-16 w-full">
         <Link href="/" className="flex items-center gap-2 hover:underline">
           <IoArrowBack className="h-5 w-5 text-brand" />
           <span className="font-medium">Back</span>
         </Link>
-        <span className="flex-grow text-center font-instrumentSerif italic text-5xl">
+        <span className="flex-grow hidden md:block text-center font-instrumentSerif italic text-5xl">
           {project.name}
         </span>
-        <Link href="/" className="flex items-center gap-2 hover:underline">
-          <span className="font-medium">Website</span>
-          <IoArrowForward className="h-5 w-5 text-brand" />
-        </Link>
+        {project.link && (
+          <Link
+            href={project.link}
+            className="flex items-center gap-2 hover:underline"
+          >
+            <span className="font-medium">Website</span>
+            <IoArrowForward className="h-5 w-5 text-brand" />
+          </Link>
+        )}
       </nav>
-      <div className="w-full flex gap-16">
+      <span className="md:hidden flex-grow text-center font-instrumentSerif italic text-5xl">
+        {project.name}
+      </span>
+      <div className="w-full flex flex-col-reverse md:flex-row gap-16">
         <div className={`flex flex-grow gap-6 flex-col`}>
           {project.image.main?.map((image, index) => (
             <Image
@@ -44,10 +52,10 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
           ))}
         </div>
 
-        <div className="w-96 space-y-12 border-l border-[#999999] pl-4 max-h-[50rem]">
+        <div className="md:w-96 w-full space-y-12 md:border-l border-[#999999] md:pl-4 max-h-[50rem]">
           <div className="space-y-2">
             <div className="flex items-center justify-between">
-              <span className="text-xl">Portfolio</span>
+              <span className="text-xl">{project.type}</span>
               <span>{project.year}</span>
             </div>
             <hr className="h-[2px] mx-auto my-4 bg-brand border-0 rounded" />
