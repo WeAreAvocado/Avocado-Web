@@ -3,6 +3,7 @@ import { GoDotFill } from "react-icons/go";
 import { IoSpeedometer } from "react-icons/io5";
 import { FaPaintBrush } from "react-icons/fa";
 import { IoMdFingerPrint } from "react-icons/io";
+import { MdOutlineArrowOutward } from "react-icons/md";
 import { PROJECTS } from "@/constants";
 import Link from "next/link";
 
@@ -40,7 +41,7 @@ const Projects = () => {
                   href={`/projects/${project.slug}`}
                   className="w-11/12 space-y-8 group/project"
                 >
-                  <div className="relative w-full m-auto h-56 md:h-96 group-hover/project:blur-sm ">
+                  <div className="relative w-full m-auto h-56 md:h-96 group-hover/project:blur-sm">
                     <Image
                       src={`/assets/projects/${project.slug}/${project.image.thumbnail}`}
                       alt={project.name}
@@ -48,12 +49,17 @@ const Projects = () => {
                       fill
                     />
                   </div>
-                  <div className="font-bold space-y-4">
-                    <span className="text-xl">{project.name}</span>
-                    <div className="flex items-center gap-2 text-[#6E6E6E]">
-                      <span className="text-sm">{project.year}</span>
-                      <GoDotFill className="h-2 w-2" />
-                      <span className="text-sm">{project.type}</span>
+                  <div className="font-bold flex justify-between items-center">
+                    <div className="space-y-4">
+                      <span className="text-xl">{project.name}</span>
+                      <div className="flex items-center gap-2 text-[#6E6E6E]">
+                        <span className="text-sm">{project.year}</span>
+                        <GoDotFill className="h-2 w-2" />
+                        <span className="text-sm">{project.type}</span>
+                      </div>
+                    </div>
+                    <div className="bg-white h-12 w-12 rounded-full group-hover/project:flex justify-center items-center cursor-pointer hidden">
+                      <MdOutlineArrowOutward className="h-6 w-6 text-black" />
                     </div>
                   </div>
                 </Link>
@@ -69,7 +75,7 @@ const Projects = () => {
                 href={`/projects/${project.slug}`}
                 className="w-11/12 space-y-8 group/project"
               >
-                <div className="relative w-full m-auto h-56 md:h-96 group-hover/project:blur-sm ">
+                <div className="relative w-full m-auto h-56 md:h-96 group-hover/project:blur-sm">
                   <Image
                     src={`/assets/projects/${project.slug}/${project.image.thumbnail}`}
                     alt={project.name}
@@ -77,12 +83,17 @@ const Projects = () => {
                     fill
                   />
                 </div>
-                <div className="font-bold space-y-4">
-                  <span className="text-xl">{project.name}</span>
-                  <div className="flex items-center gap-2 text-[#6E6E6E]">
-                    <span className="text-sm">{project.year}</span>
-                    <GoDotFill className="h-2 w-2" />
-                    <span className="text-sm">{project.type}</span>
+                <div className="font-bold flex justify-between items-center">
+                  <div className="space-y-4">
+                    <span className="text-xl">{project.name}</span>
+                    <div className="flex items-center gap-2 text-[#6E6E6E]">
+                      <span className="text-sm">{project.year}</span>
+                      <GoDotFill className="h-2 w-2" />
+                      <span className="text-sm">{project.type}</span>
+                    </div>
+                  </div>
+                  <div className="bg-white h-12 w-12 rounded-full group-hover/project:flex justify-center items-center cursor-pointer hidden">
+                    <MdOutlineArrowOutward className="h-6 w-6 text-black" />
                   </div>
                 </div>
               </Link>
