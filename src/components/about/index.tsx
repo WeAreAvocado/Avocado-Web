@@ -21,7 +21,7 @@ const About = () => {
         <div className="absolute -top-[14rem] -left-[14rem] scale-50 md:scale-100 md:-top-[14rem] md:-left-[14rem] select-none flex items-center justify-center">
           <Image
             className="object-cover h-fit w-full"
-            src="/assets/vector.png"
+            src="/assets/vector-about.png"
             alt="About Us Background"
             width={500}
             height={500}
@@ -31,7 +31,7 @@ const About = () => {
         <div className="absolute -bottom-[14rem] -right-[12rem] scale-50 md:scale-100 md:-bottom-[14rem] md:-right-[10rem] select-none flex items-center justify-center">
           <Image
             className="object-cover h-fit w-full"
-            src="/assets/vector.png"
+            src="/assets/vector-about.png"
             alt="About Us Background"
             width={500}
             height={500}
