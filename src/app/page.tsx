@@ -17,12 +17,12 @@ export default function Home() {
         {/* Background lines */}
         <div className="absolute inset-0">
           <div className="relative w-full h-[36rem] md:h-full select-none">
-            {/* <Image
+            <Image
               className="object-cover opacity-10"
               src="/assets/background-lines.png"
-              alt="Next.js Logo"
+              alt="Background Lines"
               fill
-            /> */}
+            />
           </div>
         </div>
         {/* Layer Blur light effect */}
@@ -31,57 +31,59 @@ export default function Home() {
         </div>
       </div>
 
-      {/* <div className="">
+      <div>
         <Image
           src="/assets/hero-section/2.png"
           alt="Avocado Tech"
           width={120}
           height={120}
-          className="absolute top-32 left-20"
+          className="z-[-1] absolute scale-50 sm:scale-75 md:scale-100 top-[3.5rem] left-14 sm:top-24 sm:left-10 md:top-32 md:left-20"
         />
-        <Image
-          src="/assets/hero-section/1.png"
-          alt="Avocado Tech"
-          width={120}
-          height={120}
-          className="absolute top-[20rem] left-32 animate-spin-slow"
-        />
+        <div className="absolute top-[7rem] -left-[2rem] sm:top-[20rem] sm:left-16 md:top-[20rem] md:left-32 scale-50 sm:scale-75 md:scale-100">
+          <Image
+            src="/assets/hero-section/1.png"
+            alt="Avocado Tech"
+            width={120}
+            height={120}
+            className="animate-spin-slow h-full w-full"
+          />
+        </div>
         <Image
           src="/assets/hero-section/3.png"
           alt="Avocado Tech"
           width={130}
           height={130}
-          className="absolute top-[14rem] -right-4"
+          className="z-[-1] absolute scale-50 sm:scale-75 md:scale-100 top-[6rem] -right-4 sm:top-[10rem] sm:-right-4 md:top-[14rem] md:-right-4"
         />
         <Image
           src="/assets/hero-section/4.png"
           alt="Avocado Tech"
           width={150}
           height={150}
-          className="absolute top-[40rem] left-[2rem]"
+          className="z-[-1] absolute scale-50 sm:scale-75 md:scale-100 top-[15rem] left-[1rem] sm:top-[27rem] sm:left-[1rem] md:top-[40rem] md:left-[2rem]"
         />
         <Image
           src="/assets/hero-section/5.png"
           alt="Avocado Tech"
           width={150}
           height={150}
-          className="absolute top-[38rem] right-[12rem]"
+          className="z-[-1] absolute scale-50 sm:scale-75 md:scale-100 top-[23rem] -right-[2.5rem] sm:top-[28rem] sm:right-[2rem] md:top-[38rem] md:right-[12rem]"
         />
         <Image
           src="/assets/hero-section/6.png"
           alt="Avocado Tech"
           width={120}
           height={120}
-          className="absolute top-[24rem] right-[8rem]"
+          className="z-[-1] absolute scale-50 sm:scale-75 md:scale-100 top-[15rem] right-[0rem] sm:top-[19rem] sm:right-[8rem] md:top-[24rem] md:right-[8rem]"
         />
         <Image
           src="/assets/hero-section/7.png"
           alt="Avocado Tech"
           width={200}
           height={200}
-          className="absolute top-[32rem] left-[14rem] hover:scale-110 duration-150 ease-in transition-all"
+          className="absolute scale-50 sm:scale-75 md:scale-100 top-[23rem] -left-[5rem] sm:top-[28rem] sm:left-[14rem] md:top-[32rem] md:left-[14rem] hover:scale-110 duration-150 ease-in transition-all"
         />
-      </div> */}
+      </div>
 
       {/* Nav Bar */}
       <div className="sm:hidden">
@@ -89,7 +91,7 @@ export default function Home() {
       </div>
 
       {/* Hero Section */}
-      <div className="h-[36rem] md:h-screen w-screen flex flex-col items-center pt-32 md:pt-64 2xl:pt-80 gap-24 2xl:gap-32 z-50">
+      <div className="h-[36rem] md:h-screen w-screen flex flex-col items-center pt-32 sm:pt-48 md:pt-64 2xl:pt-80 gap-24 2xl:gap-32 z-50">
         <div className="flex flex-col items-center justify-center gap-6 2xl:gap-10 px-4">
           <div className="font-semibold text-3xl sm:text-4xl  text-center md:text-6xl flex flex-col items-center justify-center">
             <span>

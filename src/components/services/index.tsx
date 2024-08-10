@@ -10,8 +10,21 @@ const Services = () => {
   return (
     <div
       id="services"
-      className="flex flex-col items-center gap-16 w-full pt-36 md:pt-56 px-4"
+      className="flex flex-col items-center gap-16 w-full pt-36 md:pt-56 px-4 relative"
     >
+      <div className="z-[-1] absolute select-none flex flex-shrink-0 items-center justify-center w-full md:w-9/12 top-[22rem] scale-150 md:scale-100 md:top-[27rem]">
+        <Image
+          className="object-cover h-fit w-full"
+          src="/assets/services/bg.png"
+          alt="Services Background"
+          width={1200}
+          height={1200}
+        />
+      </div>
+      <div className="z-[-1] absolute select-none flex flex-shrink-0 items-center justify-center w-full md:w-9/12 top-[22rem] scale-150 md:scale-100 md:top-[27rem]">
+        <div className="w-[40rem] h-[40rem] flex-shrink-0 rounded-full bg-brand bg-opacity-60 filter blur-[250px]" />
+      </div>
+
       <button className="rounded-full font-bold px-6 py-2 text-center md:px-10 md:py-3 text-sm md:text-lg border border-white">
         Services
       </button>

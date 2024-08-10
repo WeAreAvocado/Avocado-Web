@@ -34,7 +34,17 @@ const ContactUs = () => {
         <span className="font-instrumentSerif font-normal italic ">us</span>
       </span>
 
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-4 rounded-3xl md:border md:border-[#6E6E6E] md:p-12">
+      <div className="relative w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-4 rounded-3xl md:border md:border-[#6E6E6E] md:p-12">
+        <div className="absolute bottom-0 md:-bottom-1/2 left-1/2 transform -translate-x-1/2 w-full scale-200 md:scale-100 md:w-10/12 lg:w-8/12 h-full z-[-1] select-none flex items-center justify-center">
+          <Image
+            className="object-cover h-fit w-full md:w-10/12 lg:w-11/12 animate-spin-extra-slow opacity-80"
+            src="/assets/lights-contact-us.png"
+            alt="Contact Us Background"
+            width={343.52}
+            height={432}
+          />
+        </div>
+
         <div className="flex flex-col flex-1 divide-[#6E6E6E] gap-7 border border-[#6E6E6E] md:border-none p-6 md:p-0 rounded-3xl">
           <span className="text-2xl font-bold text-brand">Get in touch</span>
           <hr className="w-full md:w-5/6" />
@@ -92,7 +102,7 @@ const ContactUs = () => {
               type="text"
               placeholder="Your Name"
               name="name"
-              className="text-[#8F8E8E] bg-transparent border border-[#6E6E6E] border-opacity-60 rounded-md p-2 outline-none focus:border-brand"
+              className="text-[#8F8E8E] bg-[#0A0A0A] bg-opacity-65 border border-[#6E6E6E] border-opacity-60 rounded-md p-2 outline-none focus:border-brand"
             />
           </div>
           <div className="flex flex-1 flex-col gap-2 col-span-2 md:col-span-1">
@@ -101,7 +111,7 @@ const ContactUs = () => {
               type="text"
               placeholder="Your Email"
               name="email"
-              className="text-[#8F8E8E] bg-transparent border border-[#6E6E6E] border-opacity-60 rounded-md p-2 outline-none focus:border-brand"
+              className="text-[#8F8E8E] bg-[#0A0A0A] bg-opacity-65 border border-[#6E6E6E] border-opacity-60 rounded-md p-2 outline-none focus:border-brand"
             />
           </div>
           <div className="flex flex-1 flex-col gap-2 col-span-2 md:col-span-1">
@@ -110,7 +120,7 @@ const ContactUs = () => {
               type="tel"
               placeholder="Your Mobile Number"
               name="mobile"
-              className="text-[#8F8E8E] bg-transparent border border-[#6E6E6E] border-opacity-60 rounded-md p-2 outline-none focus:border-brand"
+              className="text-[#8F8E8E] bg-[#0A0A0A] bg-opacity-65 border border-[#6E6E6E] border-opacity-60 rounded-md p-2 outline-none focus:border-brand"
             />
           </div>
           <div className="flex flex-1 flex-col gap-2 mt-4 relative col-span-2">
@@ -119,7 +129,7 @@ const ContactUs = () => {
               rows={6}
               placeholder="Your Message"
               name="message"
-              className="bg-transparent text-[#8F8E8E] resize-none border border-[#6E6E6E] border-opacity-60 rounded-md p-2 outline-none focus:border-brand"
+              className="bg-[#0A0A0A] bg-opacity-65 text-[#8F8E8E] resize-none border border-[#6E6E6E] border-opacity-60 rounded-md p-2 outline-none focus:border-brand"
             />
             <Image
               className="object-cover select-none absolute opacity-20 top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2"
@@ -139,9 +149,9 @@ const ContactUs = () => {
           </div>
           <button
             type="submit"
-            className="text-white col-span-2 w-full rounded-md !bg-brand font-bold px-10 py-3 text-lg"
+            className="relative flex items-center justify-center overflow-hidden w-full font-bold px-10 py-3 text-lg rounded-md !bg-brand text-white col-span-2 transition-all before:absolute before:bottom-[-25px] before:left-1/2 before:-translate-x-1/2 before:h-0 before:w-0 before:rounded-full before:bg-white before:duration-700 before:ease-out hover:before:h-[40rem] hover:before:w-[40rem] hover:before:bottom-[-20rem] hover:text-brand"
           >
-            Send Message
+            <span className="relative z-10">Send Message</span>
           </button>
         </form>
       </div>

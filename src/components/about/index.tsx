@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { GoDotFill } from "react-icons/go";
 import { IoArrowForwardOutline } from "react-icons/io5";
@@ -16,7 +17,27 @@ const About = () => {
         are
       </div>
 
-      <div className="w-full from-[#8D9853] to-[#2E321B] rounded-2xl bg-gradient-to-br py-4 px-8 sm:py-8 sm:px-12 md:py-16 md:px-24 2xl:px-44 2xl:py-24 relative flex flex-col gap-8 sm:gap-12">
+      <div className="w-full overflow-hidden from-[#8D9853] to-[#2E321B] rounded-2xl bg-gradient-to-br py-4 px-8 sm:py-8 sm:px-12 md:py-16 md:px-24 2xl:px-44 2xl:py-24 relative flex flex-col gap-8 sm:gap-12">
+        <div className="absolute -top-[14rem] -left-[14rem] scale-50 md:scale-100 md:-top-[14rem] md:-left-[14rem] select-none flex items-center justify-center">
+          <Image
+            className="object-cover h-fit w-full"
+            src="/assets/vector.png"
+            alt="About Us Background"
+            width={500}
+            height={500}
+          />
+        </div>
+
+        <div className="absolute -bottom-[14rem] -right-[12rem] scale-50 md:scale-100 md:-bottom-[14rem] md:-right-[10rem] select-none flex items-center justify-center">
+          <Image
+            className="object-cover h-fit w-full"
+            src="/assets/vector.png"
+            alt="About Us Background"
+            width={500}
+            height={500}
+          />
+        </div>
+
         <span className="flex items-center gap-1 text-lg font-semibold">
           <GoDotFill size={25} />
           Introduction

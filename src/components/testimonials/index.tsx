@@ -36,7 +36,7 @@ const Testimonials = () => {
         Testimonials
       </button>
 
-      <div className="text-2xl sm:text-5xl md:text-6xl font-bold">
+      <div className="text-2xl sm:text-5xl md:text-6xl font-bold text-center">
         We are collecting client{" "}
         <span className="font-instrumentSerif font-normal italic ">
           reviews.
