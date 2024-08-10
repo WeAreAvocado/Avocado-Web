@@ -52,7 +52,7 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
           ))}
         </div>
 
-        <div className="md:w-96 w-full space-y-12 md:border-l border-[#999999] md:pl-4 max-h-[50rem]">
+        <div className="md:sticky md:top-[12rem] md:w-96 w-full space-y-12 md:border-l border-[#999999] md:pl-4 max-h-[50rem] mr-16">
           <div className="space-y-2">
             <div className="flex items-center justify-between">
               <span className="text-xl">{project.type}</span>

@@ -20,7 +20,8 @@ const BookACall = () => {
           profitability with paid ads, then you&apos;re in the right place.
         </span>
         <Link
-          href="#contact-us"
+          href="https://calendly.com/alotavocados/30min"
+          target="_blank"
           className="bg-white w-fit rounded-md text-brand font-bold px-6 py-2 text-center md:px-10 md:py-3 text-sm md:text-lg border hover:border-transparent hover:outline hover:outline-4 duration-75 ease-in-out transition-all"
         >
           Book a call
