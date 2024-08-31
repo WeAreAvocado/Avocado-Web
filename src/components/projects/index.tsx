@@ -29,7 +29,7 @@ const Projects = () => {
       </div>
 
       <div className="md:flex md:justify-center space-y-16 gap-12 w-full px-4">
-        <div className="md:flex-1 flex flex-col px-4 gap-16">
+        <div className="md:flex-1 flex flex-col px-4 gap-24">
           <span className="text-2xl md:text-3xl font-bold">
             Recent Projects
           </span>

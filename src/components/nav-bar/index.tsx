@@ -1,3 +1,4 @@
+import { NAV_LINKS } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -16,21 +17,15 @@ const NavBar = () => {
           />
         </Link>
         <nav className="flex gap-6">
-          <Link href="#projects" className="flex items-center gap-2">
-            Projects
-          </Link>
-          <Link href="#about" className="flex items-center gap-2">
-            About
-          </Link>
-          <Link href="#services" className="flex items-center gap-2">
-            Services
-          </Link>
-          <Link href="#testimonials" className="flex items-center gap-2">
-            Testimonials
-          </Link>
-          <Link href="#contact-us" className="flex items-center gap-2">
-            Contact
-          </Link>
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className="flex items-center gap-2 text-neutral-100"
+            >
+              {link.name}
+            </Link>
+          ))}
         </nav>
       </div>
     </div>

@@ -16,7 +16,7 @@ const initialState: IInitialState = {
   success: false,
 };
 
-const ContactUs = () => {
+const ContactUs = ({ isSeparatePage }: { isSeparatePage?: boolean }) => {
   const [state, formAction] = useFormState(sendMail, initialState);
   const ref = useRef<HTMLFormElement>(null);
 
@@ -25,9 +25,11 @@ const ContactUs = () => {
       id="contact-us"
       className="flex flex-col items-center gap-16 w-full pt-36 md:pt-56 px-4"
     >
-      <button className="rounded-full font-bold px-6 py-2 text-center md:px-10 md:py-3 text-sm md:text-lg border border-white">
-        Contact Us
-      </button>
+      {!isSeparatePage && (
+        <button className="rounded-full font-bold px-6 py-2 text-center md:px-10 md:py-3 text-sm md:text-lg border border-white">
+          Contact Us
+        </button>
+      )}
 
       <span className="text-2xl sm:text-5xl md:text-6xl font-bold">
         Reach out to{" "}

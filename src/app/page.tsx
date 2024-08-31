@@ -7,7 +7,10 @@ import Testimonials from "@/components/testimonials";
 import BookACall from "@/components/book-a-call";
 import ContactUs from "@/components/contact-us";
 import Link from "next/link";
-import NavBarMobile from "@/components/nav-bar-mobile";
+
+import { FaUser } from "react-icons/fa";
+import { CgCoffee } from "react-icons/cg";
+import { BsStars } from "react-icons/bs";
 
 export default function Home() {
   return (
@@ -85,11 +88,6 @@ export default function Home() {
         />
       </div>
 
-      {/* Nav Bar */}
-      <div className="sm:hidden">
-        <NavBarMobile />
-      </div>
-
       {/* Hero Section */}
       <div className="h-[36rem] md:h-screen w-screen flex flex-col items-center pt-32 sm:pt-48 md:pt-64 2xl:pt-80 gap-24 2xl:gap-32 z-50">
         <div className="flex flex-col items-center justify-center gap-6 2xl:gap-10 px-4">
@@ -134,8 +132,32 @@ export default function Home() {
       </video>
 
       <div className="flex flex-col w-screen items-center max-w-screen-xl 2xl:max-w-screen-2xl m-auto">
+        <div className="flex flex-col md:flex-row gap-4 justify-center items-center p-4 w-full mt-12">
+          <div className="bg-[#121212] flex flex-col items-center justify-center gap-8 rounded-xl w-full h-52 md:w-60">
+            <FaUser size={56} />
+            <span className="flex flex-col justify-center items-center font-semibold">
+              <span className="text-4xl">20</span>
+              <span className="text-lg">Employees</span>
+            </span>
+          </div>
+          <div className="bg-[#121212] flex flex-col items-center justify-center gap-8 rounded-xl w-full h-52 md:w-60">
+            <CgCoffee size={56} />
+            <span className="flex flex-col justify-center items-center font-semibold">
+              <span className="text-4xl">1750</span>
+              <span className="text-lg">Cup of Tea</span>
+            </span>
+          </div>
+          <div className="bg-[#121212] flex flex-col items-center justify-center gap-8 rounded-xl w-full h-52 md:w-60">
+            <BsStars size={56} />
+            <span className="flex flex-col justify-center items-center font-semibold">
+              <span className="text-4xl">100</span>
+              <span className="text-lg">Clients</span>
+            </span>
+          </div>
+        </div>
+
         {/* Featured On  */}
-        <FeaturedOn />
+        {/* <FeaturedOn /> */}
 
         {/* Projects */}
         <Projects />

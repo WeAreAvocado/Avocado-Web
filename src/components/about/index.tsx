@@ -3,15 +3,17 @@ import Link from "next/link";
 import { GoDotFill } from "react-icons/go";
 import { IoArrowForwardOutline } from "react-icons/io5";
 
-const About = () => {
+const About = ({ isSeparatePage }: { isSeparatePage?: boolean }) => {
   return (
     <div
       id="about"
       className="flex flex-col items-center gap-16 w-full pt-36 md:pt-56 px-4"
     >
-      <button className="rounded-full font-bold px-6 py-2 text-center md:px-10 md:py-3 text-sm md:text-lg border border-white">
-        About
-      </button>
+      {!isSeparatePage && (
+        <button className="rounded-full font-bold px-6 py-2 text-center md:px-10 md:py-3 text-sm md:text-lg border border-white">
+          About
+        </button>
+      )}
       <div className="text-2xl sm:text-5xl md:text-6xl font-bold">
         Who <span className="font-instrumentSerif font-normal italic ">we</span>{" "}
         are

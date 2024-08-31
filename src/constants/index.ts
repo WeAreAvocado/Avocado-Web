@@ -18,6 +18,7 @@ export const PROJECTS = [
       ],
     },
   },
+
   {
     link: "",
     name: "City2Guide",
@@ -60,3 +61,45 @@ export const LINKS = {
   instagram: "https://www.instagram.com/avocadotech.in",
   twitter: "https://x.com/alotavocados/",
 };
+
+export const NAV_LINKS = [
+  {
+    name: "Works",
+    href: "/works",
+  },
+  {
+    name: "Services",
+    href: "/services",
+  },
+  {
+    name: "Blogs",
+    href: "/blogs",
+  },
+  {
+    name: "About",
+    href: "/about",
+  },
+  {
+    name: "Contact",
+    href: "/contact",
+  },
+];
+
+export const GRAPHIC_DESIGN = [
+  {
+    name: "1",
+    href: "1.png",
+  },
+  {
+    name: "2",
+    href: "2.png",
+  },
+  {
+    name: "3",
+    href: "3.png",
+  },
+  {
+    name: "4",
+    href: "4.png",
+  },
+];

@@ -5,7 +5,7 @@ import NavBar from "@/components/nav-bar";
 import Footer from "@/components/footer";
 import { Toaster } from "sonner";
 import CustomCursor from "@/components/custom-cursor";
-
+import NavBarMobile from "@/components/nav-bar-mobile";
 
 export const metadata: Metadata = {
   title: "Avocado Tech",
@@ -25,6 +25,9 @@ export default function RootLayout({ children }: IProp) {
       <body className="font-satoshiVariable bg-[#0A0A0A] text-white">
         <CustomCursor />
         <NavBar />
+        <div className="sm:hidden">
+          <NavBarMobile />
+        </div>
         {children}
         <div className="w-screen items-center max-w-screen-xl 2xl:max-w-screen-2xl m-auto mt-36 md:mt-56 px-4">
           <Footer />
