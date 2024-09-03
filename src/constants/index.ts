@@ -103,3 +103,14 @@ export const GRAPHIC_DESIGN = [
     href: "4.png",
   },
 ];
+
+export const BLOG_CATEGORIES = [
+  {
+    name: "UI/UX",
+    href: "ui-ux",
+  },
+  {
+    name: "Web Development",
+    href: "web-development",
+  },
+];

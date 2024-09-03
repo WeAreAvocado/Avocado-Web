@@ -42,7 +42,7 @@ const Services = ({ isSeparatePage }: { isSeparatePage?: boolean }) => {
       </div>
 
       <div className="gap-8 grid md:grid-cols-2 xl:grid-cols-3 w-10/12 m-auto px-4 justify-center">
-        <Link href="/services/">
+        <Link href="/services/digital-marketing">
           <div className="rounded-2xl flex flex-col gap-6 py-8 px-6 border border-[#6E6E6E] bg-[#0A0A0A] bg-opacity-50 w-80 h-60 group/service m-auto">
             <HiLightningBolt className="h-12 w-12 text-white flex-shrink-0 group-hover/service:text-[#FF4830]" />
             <div className="flex flex-col gap-4">
@@ -56,12 +56,12 @@ const Services = ({ isSeparatePage }: { isSeparatePage?: boolean }) => {
           </div>
         </Link>
 
-        <Link href="/services/">
+        <Link href="/services/seo-optimization">
           <div className="rounded-2xl flex flex-col gap-6 py-8 px-6 border border-[#6E6E6E] bg-[#0A0A0A] bg-opacity-50 w-80 h-60 group/service  m-auto">
             <FaFolder className="h-12 w-12 text-white flex-shrink-0 group-hover/service:text-[#FF4830]" />
             <div className="flex flex-col gap-4">
               <span className="text-xl font-semibold group-hover/service:text-[#FF4830]">
-                Seo Optimization.{" "}
+                Seo Optimization.
               </span>
               <span className="w-11/12 text-[#6E6E6E] text-md">
                 Targeted strategies for maximum online impact.
@@ -69,7 +69,7 @@ const Services = ({ isSeparatePage }: { isSeparatePage?: boolean }) => {
             </div>
           </div>
         </Link>
-        <Link href="/services/">
+        <Link href="/services/app-design-and-development">
           <div className="rounded-2xl flex flex-col gap-6 py-8 px-6 border border-[#6E6E6E] bg-[#0A0A0A] bg-opacity-50 w-80 h-60 group/service  m-auto">
             <FaBookOpen className="h-12 w-12 text-white flex-shrink-0 group-hover/service:text-[#FF4830]" />
             <div className="flex flex-col gap-4">
@@ -82,7 +82,7 @@ const Services = ({ isSeparatePage }: { isSeparatePage?: boolean }) => {
             </div>
           </div>
         </Link>
-        <Link href="/services/">
+        <Link href="/services/web-design-and-development">
           <div className="rounded-2xl flex flex-col gap-6 py-8 px-6 border border-[#6E6E6E] bg-[#0A0A0A] bg-opacity-50 w-80 h-60 group/service  m-auto">
             <TbLayoutCardsFilled className="h-12 w-12 text-white flex-shrink-0 group-hover/service:text-[#FF4830]" />
             <div className="flex flex-col gap-4">
@@ -96,7 +96,7 @@ const Services = ({ isSeparatePage }: { isSeparatePage?: boolean }) => {
             </div>
           </div>
         </Link>
-        <Link href="/services/">
+        <Link href="/services/e-commerce-website-and-app">
           <div className="rounded-2xl flex flex-col gap-6 py-8 px-6 border border-[#6E6E6E] bg-[#0A0A0A] bg-opacity-50 w-80 h-60 group/service  m-auto">
             <PiStarFourFill className="h-12 w-12 text-white flex-shrink-0 group-hover/service:text-[#FF4830]" />
             <div className="flex flex-col gap-4">
@@ -110,7 +110,7 @@ const Services = ({ isSeparatePage }: { isSeparatePage?: boolean }) => {
             </div>
           </div>
         </Link>
-        <Link href="/services/">
+        <Link href="/services/crm-integration">
           <div className="rounded-2xl flex flex-col gap-6 py-8 px-6 border border-[#6E6E6E] bg-[#0A0A0A] bg-opacity-50 w-80 h-60 group/service  m-auto">
             <TbCirclesRelation className="h-12 w-12 text-white flex-shrink-0 group-hover/service:text-[#FF4830]" />
             <div className="flex flex-col gap-4">

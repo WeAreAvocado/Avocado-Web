@@ -22,7 +22,7 @@ export default function RootLayout({ children }: IProp) {
       lang="en"
       className={`${instrumentSerif.variable} ${satoshiVariable.variable}`}
     >
-      <body className="font-satoshiVariable bg-[#0A0A0A] text-white">
+      <body className="antialiased font-satoshiVariable bg-[#0A0A0A] text-white">
         <CustomCursor />
         <NavBar />
         <div className="sm:hidden">
