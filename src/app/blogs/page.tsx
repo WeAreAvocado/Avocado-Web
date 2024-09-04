@@ -17,7 +17,7 @@ const BlogPostPage = async () => {
 
   return (
     <div className="min-h-[25rem] text-white flex flex-col items-center gap-8 max-w-screen-lg 2xl:max-w-screen-xl m-auto px-4">
-      <div className="min-w-full space-y-8 mt-16 md:mt-44 md:space-y-12">
+      <div className="min-w-full space-y-8 mt-28 md:mt-44 md:space-y-12">
         <div className="flex justify-between items-center">
           <h1 className="text-3xl md:text-5xl font-bold">Latest</h1>
           <Link href={`/blogs/tag/all`} className="text-[#B8B8B8] text-lg">

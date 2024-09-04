@@ -7,7 +7,9 @@ const About = ({ isSeparatePage }: { isSeparatePage?: boolean }) => {
   return (
     <div
       id="about"
-      className="flex flex-col items-center gap-16 w-full pt-36 md:pt-56 px-4"
+      className={`flex flex-col items-center gap-16 w-full px-4 ${
+        !isSeparatePage && "pt-36 md:pt-56"
+      }`}
     >
       {!isSeparatePage && (
         <button className="rounded-full font-bold px-6 py-2 text-center md:px-10 md:py-3 text-sm md:text-lg border border-white">
@@ -48,10 +50,14 @@ const About = ({ isSeparatePage }: { isSeparatePage?: boolean }) => {
           At the forefront of{" "}
           <span className="font-instrumentSerif italic font-thin">design</span>{" "}
           innovation, our agency harnesses digital{" "}
-          <span className="font-instrumentSerif italic font-thin">creativity</span> to
-          help brands{" "}
-          <span className="font-instrumentSerif italic font-thin">innovate</span> rapidly
-          and effectively.
+          <span className="font-instrumentSerif italic font-thin">
+            creativity
+          </span>{" "}
+          to help brands{" "}
+          <span className="font-instrumentSerif italic font-thin">
+            innovate
+          </span>{" "}
+          rapidly and effectively.
         </div>
         <div className="z-10 flex w-fit gap-1 hover:flex-row-reverse hover:justify-end hover:duration-300 hover:ease-in-out hover:transition-all">
           <Link

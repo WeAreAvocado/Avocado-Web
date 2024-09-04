@@ -12,7 +12,7 @@ const NavBarMobile = () => {
     <Popover>
       {({ open }) => (
         <div className="w-full flex justify-center relative bg-transparent">
-          <div className="rounded-full py-1.5 px-2 flex items-center max-w-3xl w-full bg-transparent justify-between m-auto overflow-hidden z-[55]">
+          <div className="absolute rounded-full py-1.5 px-2 flex items-center max-w-3xl w-full bg-transparent justify-between m-auto overflow-hidden z-[55]">
             <Link href="/" className="flex items-center gap-2 z-[55]">
               <Image
                 className="object-cover z-[55]"

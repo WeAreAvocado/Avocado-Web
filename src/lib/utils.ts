@@ -49,6 +49,13 @@ export const getAllBlogs = async () => {
   return blogsData;
 };
 
+export const getAboutData = async () => {
+  const filePath = "src/app/about/about.mdx";
+
+  const rawContent = fs.readFileSync(filePath, "utf-8");
+  return await matter(rawContent);
+};
+
 export const getBlogCategoryData = async (blogs: IBlogs[]) => {
   const categorizedBlogs: { [key: string]: any[] } = {};
 

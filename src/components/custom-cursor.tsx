@@ -22,12 +22,10 @@ const CustomCursor: React.FC = () => {
 
     const handleMouseEnter = () => {
       setIsHovering(true);
-      console.log("Mouse entered");
     };
 
     const handleMouseLeave = () => {
       setIsHovering(false);
-      console.log("Mouse left");
     };
 
     window.addEventListener("mousemove", handleMouseMove);

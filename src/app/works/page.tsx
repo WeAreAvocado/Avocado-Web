@@ -27,7 +27,7 @@ const WorksPage = () => {
 
   return (
     <div className="flex flex-col max-w-screen-xl 2xl:max-w-screen-2xl m-auto px-4">
-      <div className="space-y-4 mt-16 md:mt-44">
+      <div className="space-y-4 mt-28 md:mt-44">
         <div className="flex gap-8 md:gap-12 text-xl md:text-4xl">
           <span
             className={`cursor-pointer ${
