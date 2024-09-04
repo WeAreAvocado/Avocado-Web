@@ -46,11 +46,11 @@ const About = ({ isSeparatePage }: { isSeparatePage?: boolean }) => {
         </span>
         <div className="z-10 !leading-relaxed text-2xl sm:text-3xl md:text-5xl font-semibold">
           At the forefront of{" "}
-          <span className="font-instrumentSerif italic">design</span>{" "}
+          <span className="font-instrumentSerif italic font-thin">design</span>{" "}
           innovation, our agency harnesses digital{" "}
-          <span className="font-instrumentSerif italic">creativity</span> to
+          <span className="font-instrumentSerif italic font-thin">creativity</span> to
           help brands{" "}
-          <span className="font-instrumentSerif italic">innovate</span> rapidly
+          <span className="font-instrumentSerif italic font-thin">innovate</span> rapidly
           and effectively.
         </div>
         <div className="z-10 flex w-fit gap-1 hover:flex-row-reverse hover:justify-end hover:duration-300 hover:ease-in-out hover:transition-all">

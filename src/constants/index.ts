@@ -1,3 +1,17 @@
+import {
+  CRMIntegrationIcon,
+  DigitalMarketingIcon,
+  ECommerceDevelopmentIcon,
+  MobileAppDevelopmentIcon,
+  PayPerClickServicesIcon,
+  ReputationManagementIcon,
+  SearchEngineOptimizationIcon,
+  SocialMediaOptimizationIcon,
+  WebDesignAndRedesignIcon,
+  WebsiteDevelopmentIcon,
+} from "@/components/icons";
+import { HiLightningBolt } from "react-icons/hi";
+
 export const PROJECTS = [
   {
     link: "",
@@ -42,7 +56,7 @@ export const PROJECTS = [
     },
   },
   {
-    link: "",
+    link: "https://play.google.com/store/apps/details?id=com.avocadotech.ganesh_aarthi_app",
     name: "Ganesh Aarti",
     slug: "ganesh-aarti",
     type: "Devotional App",
@@ -112,5 +126,68 @@ export const BLOG_CATEGORIES = [
   {
     name: "Web Development",
     href: "web-development",
+  },
+];
+
+export const SERVICES = [
+  {
+    name: "Digital Marketing",
+    slug: "digital-marketing",
+    description: "Boosts online presence via ads, content.",
+    icon: DigitalMarketingIcon,
+  },
+  {
+    name: "Web Design & Redesign",
+    slug: "web-design-and-redesign",
+    description: "Builds or revamps websites for impact.",
+    icon: WebDesignAndRedesignIcon,
+  },
+  {
+    name: "Website Development",
+    slug: "website-development",
+    description: "Creates functional, user-friendly sites.",
+    icon: WebsiteDevelopmentIcon,
+  },
+  {
+    name: "Mobile App Development",
+    slug: "mobile-app-development",
+    description: "Crafts apps for seamless mobile use.",
+    icon: MobileAppDevelopmentIcon,
+  },
+  {
+    name: "Reputation Management",
+    slug: "reputation-management",
+    description: "Protects and improves brand image.",
+    icon: ReputationManagementIcon,
+  },
+  {
+    name: "Search Engine Optimization",
+    slug: "search-engine-optimization",
+    description: "Ranks sites higher on search engines.",
+    icon: SearchEngineOptimizationIcon,
+  },
+  {
+    name: "Social Media Optimization",
+    slug: "social-media-optimization",
+    description: "Enhances social profiles for growth.",
+    icon: SocialMediaOptimizationIcon,
+  },
+  {
+    name: "Pay Per Click Services",
+    slug: "pay-per-click-services",
+    description: "Paid ads drive instant online traffic.",
+    icon: PayPerClickServicesIcon,
+  },
+  {
+    name: "E-Commerce Development",
+    slug: "e-commerce-development",
+    description: "Builds online stores to sell products.",
+    icon: ECommerceDevelopmentIcon,
+  },
+  {
+    name: "CRM Integration",
+    slug: "crm-integration",
+    description: "Syncs customer data for better management.",
+    icon: CRMIntegrationIcon,
   },
 ];

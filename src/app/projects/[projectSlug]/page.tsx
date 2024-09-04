@@ -15,8 +15,8 @@ export default function ProjectPage({ params: { projectSlug } }: IProps) {
     throw new Error(`Project not found : ${projectSlug}`);
   }
   return (
-    <div className="mt-32 md:mt-44 flex flex-col gap-12 md:gap-20 items-center max-w-screen-xl 2xl:max-w-screen-2xl m-auto px-4">
-      <nav className="flex items-center justify-between gap-16 w-full">
+    <div className="flex flex-col gap-12 md:gap-20 items-center max-w-screen-xl 2xl:max-w-screen-2xl m-auto px-4">
+      <nav className="flex mt-32 md:mt-44 items-center justify-between gap-16 w-full">
         <Link href="/" className="flex items-center gap-2 hover:underline">
           <IoArrowBack className="h-5 w-5 text-brand" />
           <span className="font-medium">Back</span>

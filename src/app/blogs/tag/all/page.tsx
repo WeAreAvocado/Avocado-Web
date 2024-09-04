@@ -1,28 +1,10 @@
 import Link from "next/link";
 import { IoArrowBack } from "react-icons/io5";
-import { BLOG_CATEGORIES } from "@/constants";
-import { formatDate, getAllBlogs, getBlogCategoryData } from "@/lib/utils";
-import { notFound } from "next/navigation";
+import { formatDate, getAllBlogs } from "@/lib/utils";
 import Image from "next/image";
 
-const BlogPostTagPage = async ({
-  params: { slug },
-}: {
-  params: { slug: string };
-}) => {
+const AllBlogPostTagPage = async () => {
   const blogs = await getAllBlogs();
-  const category = BLOG_CATEGORIES.find((c) => c.href === slug)?.name;
-
-  if (!category) {
-    notFound();
-  }
-
-  const categorizedBlogs = await getBlogCategoryData(blogs);
-  const categoryBlogs = categorizedBlogs[category];
-
-  if (!categoryBlogs || categoryBlogs.length === 0) {
-    notFound();
-  }
 
   return (
     <div className="min-h-[25rem] text-white flex flex-col items-center gap-8 max-w-screen-lg 2xl:max-w-screen-xl m-auto px-4">
@@ -34,10 +16,10 @@ const BlogPostTagPage = async ({
         <span className="font-medium">Back</span>
       </Link>
 
-      <h1 className="min-w-full text-4xl font-semibold">{category}</h1>
+      <h1 className="min-w-full text-4xl font-semibold">All Blogs</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
-        {categoryBlogs.map((blog) => (
+        {blogs.map((blog) => (
           <Link
             key={blog.slug}
             href={`/blogs/${blog.slug}`}
@@ -67,4 +49,4 @@ const BlogPostTagPage = async ({
   );
 };
 
-export default BlogPostTagPage;
+export default AllBlogPostTagPage;

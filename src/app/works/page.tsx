@@ -26,8 +26,8 @@ const WorksPage = () => {
   };
 
   return (
-    <div className="mt-16 md:mt-44 flex flex-col max-w-screen-xl 2xl:max-w-screen-2xl m-auto px-4">
-      <div className="space-y-4">
+    <div className="flex flex-col max-w-screen-xl 2xl:max-w-screen-2xl m-auto px-4">
+      <div className="space-y-4 mt-16 md:mt-44">
         <div className="flex gap-8 md:gap-12 text-xl md:text-4xl">
           <span
             className={`cursor-pointer ${
@@ -63,7 +63,7 @@ const WorksPage = () => {
                   <Link
                     key={index}
                     href={`/projects/${project.slug}`}
-                    className="w-11/12 space-y-8 group/project"
+                    className="w-11/12 space-y-8 group/project cursor-read-more cursor-none"
                   >
                     <div className="relative w-full m-auto h-56 md:h-96 group-hover/project:blur-sm">
                       <Image
@@ -97,7 +97,7 @@ const WorksPage = () => {
                 <Link
                   key={index}
                   href={`/projects/${project.slug}`}
-                  className="w-11/12 space-y-8 group/project"
+                  className="w-11/12 space-y-8 group/project cursor-read-more cursor-none"
                 >
                   <div className="relative w-full m-auto h-56 md:h-96 group-hover/project:blur-sm">
                     <Image
@@ -179,7 +179,7 @@ const WorksPage = () => {
             <DialogBackdrop className="fixed inset-0 backdrop-blur-lg" />
             <div className="fixed inset-0 overflow-y-auto w-screen">
               <div className="flex min-h-full items-center justify-center">
-                <DialogPanel className="relative max-w-10/12 md:max-w-1/2 m-4">
+                <DialogPanel className="relative m-4 w-3/4 sm:w-1/2 lg:w-5/12">
                   {modalState.imageUrl && (
                     <Image
                       src={`/assets/graphic-design/${modalState.imageUrl}`}

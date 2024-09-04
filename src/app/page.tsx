@@ -8,10 +8,6 @@ import BookACall from "@/components/book-a-call";
 import ContactUs from "@/components/contact-us";
 import Link from "next/link";
 
-import { FaUser } from "react-icons/fa";
-import { CgCoffee } from "react-icons/cg";
-import { BsStars } from "react-icons/bs";
-
 export default function Home() {
   return (
     <main className="relative overflow-hidden">
@@ -40,7 +36,7 @@ export default function Home() {
           alt="Avocado Tech"
           width={120}
           height={120}
-          className="z-[-1] absolute scale-50 sm:scale-75 md:scale-100 top-[3.5rem] left-14 sm:top-24 sm:left-10 md:top-32 md:left-20"
+          className="absolute scale-50 sm:scale-75 md:scale-100 top-[3.5rem] left-14 sm:top-24 sm:left-10 md:top-32 md:left-20  hover:scale-110 duration-150 ease-in transition-all"
         />
         <div className="absolute top-[7rem] -left-[2rem] sm:top-[20rem] sm:left-16 md:top-[20rem] md:left-32 scale-50 sm:scale-75 md:scale-100">
           <Image
@@ -56,28 +52,28 @@ export default function Home() {
           alt="Avocado Tech"
           width={130}
           height={130}
-          className="z-[-1] absolute scale-50 sm:scale-75 md:scale-100 top-[6rem] -right-4 sm:top-[10rem] sm:-right-4 md:top-[14rem] md:-right-4"
+          className="absolute scale-50 sm:scale-75 md:scale-100 top-[6rem] -right-4 sm:top-[10rem] sm:-right-4 md:top-[14rem] md:-right-4 hover:scale-110 duration-150 ease-in transition-all"
         />
         <Image
           src="/assets/hero-section/4.png"
           alt="Avocado Tech"
           width={150}
           height={150}
-          className="z-[-1] absolute scale-50 sm:scale-75 md:scale-100 top-[15rem] left-[1rem] sm:top-[27rem] sm:left-[1rem] md:top-[40rem] md:left-[2rem]"
+          className="absolute scale-50 sm:scale-75 md:scale-100 top-[15rem] left-[1rem] sm:top-[27rem] sm:left-[1rem] md:top-[40rem] md:left-[2rem] hover:scale-110 duration-150 ease-in transition-all"
         />
         <Image
           src="/assets/hero-section/5.png"
           alt="Avocado Tech"
           width={150}
           height={150}
-          className="z-[-1] absolute scale-50 sm:scale-75 md:scale-100 top-[23rem] -right-[2.5rem] sm:top-[28rem] sm:right-[2rem] md:top-[38rem] md:right-[12rem]"
+          className="absolute scale-50 sm:scale-75 md:scale-100 top-[23rem] -right-[2.5rem] sm:top-[28rem] sm:right-[2rem] md:top-[38rem] md:right-[12rem] hover:scale-110 duration-150 ease-in transition-all"
         />
         <Image
           src="/assets/hero-section/6.png"
           alt="Avocado Tech"
           width={120}
           height={120}
-          className="z-[-1] absolute scale-50 sm:scale-75 md:scale-100 top-[15rem] right-[0rem] sm:top-[19rem] sm:right-[8rem] md:top-[24rem] md:right-[8rem]"
+          className="absolute scale-50 sm:scale-75 md:scale-100 top-[15rem] right-[0rem] sm:top-[19rem] sm:right-[8rem] md:top-[24rem] md:right-[8rem] hover:scale-110 duration-150 ease-in transition-all"
         />
         <Image
           src="/assets/hero-section/7.png"
@@ -122,7 +118,7 @@ export default function Home() {
       </div>
 
       <video
-        className="h-full w-5/6 md:w-8/12 rounded-3xl m-auto my-8"
+        className="h-full w-5/6 md:w-10/12 rounded-3xl m-auto my-8"
         autoPlay
         muted
         loop
@@ -132,26 +128,26 @@ export default function Home() {
       </video>
 
       <div className="flex flex-col w-screen items-center max-w-screen-xl 2xl:max-w-screen-2xl m-auto">
-        <div className="flex flex-col md:flex-row gap-4 justify-center items-center p-4 w-full mt-12">
-          <div className="bg-[#121212] flex flex-col items-center justify-center gap-8 rounded-xl w-full h-52 md:w-60">
-            <FaUser size={56} />
-            <span className="flex flex-col justify-center items-center font-semibold">
-              <span className="text-4xl">20</span>
-              <span className="text-lg">Employees</span>
+        <div className="flex flex-col md:flex-row gap-4 md:gap-28 justify-center items-center p-4 w-full mt-12">
+          <div className="flex flex-col items-center justify-center gap-6 w-full h-52 md:w-60">
+            {/* <FaUser size={45} /> */}
+            <span className="flex flex-col justify-center font-semibold">
+              <span className="text-[6rem]">20</span>
+              <span className="text-xl text-white/70">Employees</span>
             </span>
           </div>
-          <div className="bg-[#121212] flex flex-col items-center justify-center gap-8 rounded-xl w-full h-52 md:w-60">
-            <CgCoffee size={56} />
-            <span className="flex flex-col justify-center items-center font-semibold">
-              <span className="text-4xl">1750</span>
-              <span className="text-lg">Cup of Tea</span>
+          <div className="flex flex-col items-center justify-center gap-6 w-full h-52 md:w-60">
+            {/* <CgCoffee size={45} /> */}
+            <span className="flex flex-col justify-center font-semibold">
+              <span className="text-[6rem]">1750</span>
+              <span className="text-xl text-white/70">Cup of Tea</span>
             </span>
           </div>
-          <div className="bg-[#121212] flex flex-col items-center justify-center gap-8 rounded-xl w-full h-52 md:w-60">
-            <BsStars size={56} />
-            <span className="flex flex-col justify-center items-center font-semibold">
-              <span className="text-4xl">100</span>
-              <span className="text-lg">Clients</span>
+          <div className="flex flex-col items-center justify-center gap-6 w-full h-52 md:w-60">
+            {/* <BsStars size={45} /> */}
+            <span className="flex flex-col justify-center font-semibold">
+              <span className="text-[6rem]">100+</span>
+              <span className="text-xl text-white/70">Clients</span>
             </span>
           </div>
         </div>

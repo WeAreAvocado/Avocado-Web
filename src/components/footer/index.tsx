@@ -2,6 +2,7 @@ import { LINKS } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { NAV_LINKS } from "@/constants";
 
 const Footer = () => {
   return (
@@ -27,21 +28,15 @@ const Footer = () => {
         <div className="flex gap-12 md:gap-16 md:justify-end">
           <div className="flex flex-col gap-4">
             <span className="font-semibold">MAIN PAGES</span>
-            <Link className="opacity-70 text-sm" href="#projects">
-              Project
-            </Link>
-            <Link className="opacity-70 text-sm" href="#about">
-              About Us
-            </Link>
-            <Link className="opacity-70 text-sm" href="#services">
-              Services
-            </Link>
-            <Link className="opacity-70 text-sm" href="#testimonials">
-              Testimonials
-            </Link>
-            <Link className="opacity-70 text-sm" href="#contact-us">
-              Contact
-            </Link>
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                className="opacity-70 text-sm"
+                href={link.href}
+              >
+                {link.name}
+              </Link>
+            ))}
           </div>
           <div className="flex flex-col gap-4">
             <span className="font-semibold text-md">FOLLOW US</span>

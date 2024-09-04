@@ -6,6 +6,7 @@ import Footer from "@/components/footer";
 import { Toaster } from "sonner";
 import CustomCursor from "@/components/custom-cursor";
 import NavBarMobile from "@/components/nav-bar-mobile";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Avocado Tech",
@@ -33,6 +34,10 @@ export default function RootLayout({ children }: IProp) {
           <Footer />
         </div>
         <Toaster position="bottom-left" richColors closeButton />
+        <Script
+          strategy="lazyOnload"
+          src="https://embed.tawk.to/66d85ea1ea492f34bc0da069/1i6uj3a22"
+        />
       </body>
     </html>
   );

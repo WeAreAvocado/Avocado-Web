@@ -16,15 +16,20 @@ const BlogPostPage = async () => {
   const categorizedBlogs = await getBlogCategoryData(blogs);
 
   return (
-    <div className="min-h-[25rem] text-white md:mt-44 flex flex-col items-center gap-8 max-w-screen-lg 2xl:max-w-screen-xl m-auto px-4">
-      <div className="min-w-full space-y-8 md:space-y-12">
-        <h1 className="text-3xl md:text-5xl font-bold">Latest</h1>
+    <div className="min-h-[25rem] text-white flex flex-col items-center gap-8 max-w-screen-lg 2xl:max-w-screen-xl m-auto px-4">
+      <div className="min-w-full space-y-8 mt-16 md:mt-44 md:space-y-12">
+        <div className="flex justify-between items-center">
+          <h1 className="text-3xl md:text-5xl font-bold">Latest</h1>
+          <Link href={`/blogs/tag/all`} className="text-[#B8B8B8] text-lg">
+            View All
+          </Link>
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
           {latestBlogs.map((blog) => (
             <Link
               key={blog.slug}
               href={`/blogs/${blog.slug}`}
-              className="flex flex-col gap-4 w-full bg-[#222222]/80 rounded-xl p-3"
+              className="flex flex-col gap-4 w-full bg-[#222222]/80 rounded-xl p-3 cursor-read-more cursor-none"
             >
               <div className="relative w-full h-60 rounded-lg overflow-hidden">
                 <Image
@@ -66,13 +71,9 @@ const BlogPostPage = async () => {
                 <Link
                   key={blog.slug}
                   href={`/blogs/${blog.slug}`}
-                  className={`flex flex-col gap-4 w-full bg-[#222222]/80 rounded-xl p-3 ${
-                    i === 0 && categorizedBlogs[category].length >= 2
-                      ? "md:col-span-2"
-                      : ""
-                  } ${
+                  className={`flex flex-col gap-4 w-full bg-[#222222]/80 rounded-xl p-3 cursor-read-more cursor-none ${
                     i === 0 && categorizedBlogs[category].length >= 3
-                      ? "md:row-span-2"
+                      ? "md:row-span-2 md:col-span-2"
                       : ""
                   }`}
                 >

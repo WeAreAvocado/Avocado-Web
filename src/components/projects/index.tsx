@@ -39,7 +39,7 @@ const Projects = () => {
                 <Link
                   key={index}
                   href={`/projects/${project.slug}`}
-                  className="w-11/12 space-y-8 group/project"
+                  className="w-11/12 space-y-8 group/project cursor-read-more cursor-none"
                 >
                   <div className="relative w-full m-auto h-56 md:h-96 group-hover/project:blur-sm">
                     <Image
@@ -73,7 +73,7 @@ const Projects = () => {
               <Link
                 key={index}
                 href={`/projects/${project.slug}`}
-                className="w-11/12 space-y-8 group/project"
+                className="w-11/12 space-y-8 group/project cursor-read-more cursor-none"
               >
                 <div className="relative w-full m-auto h-56 md:h-96 group-hover/project:blur-sm">
                   <Image

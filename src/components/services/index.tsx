@@ -1,11 +1,6 @@
-import { HiLightningBolt } from "react-icons/hi";
-import { FaFolder } from "react-icons/fa";
-import { FaBookOpen } from "react-icons/fa";
-import { TbLayoutCardsFilled } from "react-icons/tb";
-import { PiStarFourFill } from "react-icons/pi";
-import { TbCirclesRelation } from "react-icons/tb";
 import Image from "next/image";
 import Link from "next/link";
+import { SERVICES } from "@/constants";
 
 const Services = ({ isSeparatePage }: { isSeparatePage?: boolean }) => {
   return (
@@ -13,23 +8,19 @@ const Services = ({ isSeparatePage }: { isSeparatePage?: boolean }) => {
       id="services"
       className="flex flex-col items-center gap-16 w-full pt-36 md:pt-56 px-4 relative"
     >
-      {!isSeparatePage && (
-        <div className="z-[-1] absolute select-none flex flex-shrink-0 items-center justify-center w-full md:w-9/12 top-[22rem] scale-150 md:scale-100 md:top-[27rem]">
-          <Image
-            className="object-cover h-fit w-full"
-            src="/assets/services/bg.png"
-            alt="Services Background"
-            width={1200}
-            height={1200}
-          />
-        </div>
-      )}
+      <div className="z-[-1] absolute select-none flex flex-shrink-0 items-center justify-center w-full md:w-9/12 top-[22rem] scale-150 md:scale-100 md:top-[27rem]">
+        <Image
+          className="object-cover h-fit w-full"
+          src="/assets/services/bg.png"
+          alt="Services Background"
+          width={1200}
+          height={1200}
+        />
+      </div>
 
-      {!isSeparatePage && (
-        <div className="z-[-1] absolute select-none flex flex-shrink-0 items-center justify-center w-full md:w-9/12 top-[22rem] scale-150 md:scale-100 md:top-[27rem]">
-          <div className="w-[40rem] h-[40rem] flex-shrink-0 rounded-full bg-brand bg-opacity-60 filter blur-[250px]" />
-        </div>
-      )}
+      <div className="z-[-1] absolute select-none flex flex-shrink-0 items-center justify-center w-full md:w-9/12 top-[22rem] scale-150 md:scale-100 md:top-[27rem]">
+        <div className="w-[40rem] h-[40rem] flex-shrink-0 rounded-full bg-brand bg-opacity-60 filter blur-[250px]" />
+      </div>
 
       {!isSeparatePage && (
         <button className="rounded-full font-bold px-6 py-2 text-center md:px-10 md:py-3 text-sm md:text-lg border border-white">
@@ -42,88 +33,21 @@ const Services = ({ isSeparatePage }: { isSeparatePage?: boolean }) => {
       </div>
 
       <div className="gap-8 grid md:grid-cols-2 xl:grid-cols-3 w-10/12 m-auto px-4 justify-center">
-        <Link href="/services/digital-marketing">
-          <div className="rounded-2xl flex flex-col gap-6 py-8 px-6 border border-[#6E6E6E] bg-[#0A0A0A] bg-opacity-50 w-80 h-60 group/service m-auto">
-            <HiLightningBolt className="h-12 w-12 text-white flex-shrink-0 group-hover/service:text-[#FF4830]" />
-            <div className="flex flex-col gap-4">
-              <span className="text-xl font-semibold group-hover/service:text-[#FF4830]">
-                Digital Marketing
-              </span>
-              <span className="w-11/12 text-[#6E6E6E] text-md">
-                Engaging websites tailored for your success.
-              </span>
+        {SERVICES.map((service, index) => (
+          <Link key={index} href={`/services/${service.slug}`}>
+            <div className="rounded-2xl flex flex-col gap-6 py-8 px-6 border border-[#6E6E6E] bg-[#0A0A0A] bg-opacity-50 w-80 h-60 group/service m-auto">
+              <service.icon className="h-12 w-12 text-white flex-shrink-0 group-hover/service:text-[#FF4830]" />
+              <div className="flex flex-col gap-4">
+                <span className="text-xl font-semibold group-hover/service:text-[#FF4830]">
+                  {service.name}
+                </span>
+                <span className="w-11/12 text-[#6E6E6E] text-md">
+                  {service.description}
+                </span>
+              </div>
             </div>
-          </div>
-        </Link>
-
-        <Link href="/services/seo-optimization">
-          <div className="rounded-2xl flex flex-col gap-6 py-8 px-6 border border-[#6E6E6E] bg-[#0A0A0A] bg-opacity-50 w-80 h-60 group/service  m-auto">
-            <FaFolder className="h-12 w-12 text-white flex-shrink-0 group-hover/service:text-[#FF4830]" />
-            <div className="flex flex-col gap-4">
-              <span className="text-xl font-semibold group-hover/service:text-[#FF4830]">
-                Seo Optimization.
-              </span>
-              <span className="w-11/12 text-[#6E6E6E] text-md">
-                Targeted strategies for maximum online impact.
-              </span>
-            </div>
-          </div>
-        </Link>
-        <Link href="/services/app-design-and-development">
-          <div className="rounded-2xl flex flex-col gap-6 py-8 px-6 border border-[#6E6E6E] bg-[#0A0A0A] bg-opacity-50 w-80 h-60 group/service  m-auto">
-            <FaBookOpen className="h-12 w-12 text-white flex-shrink-0 group-hover/service:text-[#FF4830]" />
-            <div className="flex flex-col gap-4">
-              <span className="text-xl font-semibold group-hover/service:text-[#FF4830]">
-                App design & Development
-              </span>
-              <span className="w-11/12 text-[#6E6E6E] text-md">
-                Destructive brands crafted to stand out.
-              </span>
-            </div>
-          </div>
-        </Link>
-        <Link href="/services/web-design-and-development">
-          <div className="rounded-2xl flex flex-col gap-6 py-8 px-6 border border-[#6E6E6E] bg-[#0A0A0A] bg-opacity-50 w-80 h-60 group/service  m-auto">
-            <TbLayoutCardsFilled className="h-12 w-12 text-white flex-shrink-0 group-hover/service:text-[#FF4830]" />
-            <div className="flex flex-col gap-4">
-              <span className="text-xl font-semibold group-hover/service:text-[#FF4830]">
-                Web design & Development
-              </span>
-              <span className="w-11/12 text-[#6E6E6E] text-md">
-                Create custom reports and gain predictive insights for business
-                growth.
-              </span>
-            </div>
-          </div>
-        </Link>
-        <Link href="/services/e-commerce-website-and-app">
-          <div className="rounded-2xl flex flex-col gap-6 py-8 px-6 border border-[#6E6E6E] bg-[#0A0A0A] bg-opacity-50 w-80 h-60 group/service  m-auto">
-            <PiStarFourFill className="h-12 w-12 text-white flex-shrink-0 group-hover/service:text-[#FF4830]" />
-            <div className="flex flex-col gap-4">
-              <span className="text-xl font-semibold group-hover/service:text-[#FF4830]">
-                E - Commerce website & App
-              </span>
-              <span className="w-11/12 text-[#6E6E6E] text-md">
-                Efficiently track leads, manage deals, and monitor sales
-                activities.
-              </span>
-            </div>
-          </div>
-        </Link>
-        <Link href="/services/crm-integration">
-          <div className="rounded-2xl flex flex-col gap-6 py-8 px-6 border border-[#6E6E6E] bg-[#0A0A0A] bg-opacity-50 w-80 h-60 group/service  m-auto">
-            <TbCirclesRelation className="h-12 w-12 text-white flex-shrink-0 group-hover/service:text-[#FF4830]" />
-            <div className="flex flex-col gap-4">
-              <span className="text-xl font-semibold group-hover/service:text-[#FF4830]">
-                CRM Integration
-              </span>
-              <span className="w-11/12 text-[#6E6E6E] text-md">
-                Seamlessly manage customer data and interactions with integrated
-                CRM.
-              </span>
-            </div>
-          </div>
-        </Link>
+          </Link>
+        ))}
       </div>
 
       {!isSeparatePage && (
