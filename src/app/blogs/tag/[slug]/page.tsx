@@ -5,6 +5,12 @@ import { formatDate, getAllBlogs, getBlogCategoryData } from "@/lib/utils";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 
+export async function generateStaticParams() {
+  return BLOG_CATEGORIES.map((category) => ({
+    slug: category.href,
+  }));
+}
+
 const BlogPostTagPage = async ({
   params: { slug },
 }: {
