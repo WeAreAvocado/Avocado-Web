@@ -16,7 +16,7 @@ const FeaturedOn = () => {
       <Marquee
         fade={true}
         pauseOnHover={true}
-        className="gap-[3rem] [--duration:10s] w-11/12 md:max-w-3xl 2xl:max-w-7xl motion-reduce:overflow-auto"
+        className="gap-[3rem] [--duration:40s] w-11/12 md:max-w-3xl 2xl:max-w-7xl motion-reduce:overflow-auto"
         innerClassName="gap-[3rem] [--gap:3rem] motion-reduce:animate-none motion-reduce:first:hidden"
       >
         {featuredOn.map((item, index) => (

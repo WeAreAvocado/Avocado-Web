@@ -1,6 +1,7 @@
 import { Marquee } from "@devnomic/marquee";
 import Image from "next/image";
 import { FaStar } from "react-icons/fa";
+import "@devnomic/marquee/dist/index.css";
 
 const Testimonials = () => {
   const testimonials = [
@@ -136,7 +137,7 @@ const Testimonials = () => {
       <Marquee
         fade={true}
         pauseOnHover={true}
-        className="gap-[3rem] [--duration:10s] w-11/12 md:max-w-4xl 2xl:max-w-7xl motion-reduce:overflow-auto"
+        className="gap-[3rem] [--duration:40s] w-11/12 md:max-w-4xl 2xl:max-w-7xl motion-reduce:overflow-auto"
         innerClassName="gap-[3rem] [--gap:3rem] motion-reduce:animate-none motion-reduce:first:hidden"
       >
         {testimonials.map((item, index) => (
@@ -150,7 +151,7 @@ const Testimonials = () => {
               ))}
             </div>
 
-            <div className="text-lg sm:text-xl text-[#AFAFAF]">
+            <div className="text-lg grow sm:text-xl text-[#AFAFAF]">
               &quot;{item.message}&quot;
             </div>
 
@@ -162,7 +163,7 @@ const Testimonials = () => {
                   alt={item.name}
                   width={50}
                   height={50}
-                  className="rounded-full"
+                  className="rounded-full flex-shrink-0"
                 />
                 <div className="flex flex-col">
                   <span className="font-semibold text-lg">{item.name}</span>
