@@ -95,8 +95,9 @@ export default function Home() {
             <span>brand with Avocado Tech?</span>
           </div>
           <div className="text-md md:text-xl max-w-lg text-center text-[#FFFFFF]/60 font-extralight">
-            Empowering startups with award-winning design solutions to stand out
-            in the market and thrive.
+            At the forefront of digital marketing and software development, our
+            agency uses innovative strategies to drive brand evolution, rapid
+            growth, and long-lasting impact.
           </div>
         </div>
 
@@ -128,8 +129,8 @@ export default function Home() {
       </video>
 
       <div className="flex flex-col w-screen items-center max-w-screen-xl 2xl:max-w-screen-2xl m-auto">
-        <div className="flex flex-col md:flex-row gap-4 md:gap-28 justify-center items-center p-4 w-full mt-12">
-          <div className="flex flex-col items-center justify-center gap-6 w-full h-52 md:w-60">
+        <div className="flex flex-wrap gap-4 md:gap-28 justify-center items-center p-4 w-full mt-12">
+          <div className="flex flex-wrap flex-col md:!flex-row items-center justify-center gap-6 w-full h-52 md:w-60">
             {/* <FaUser size={45} /> */}
             <span className="flex flex-col justify-center font-semibold">
               <span className="text-[6rem]">20</span>

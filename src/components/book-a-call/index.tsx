@@ -3,21 +3,23 @@ import Link from "next/link";
 
 const BookACall = () => {
   return (
-    <div className="2xl:w-3/4 w-11/12 h-[20rem] sm:h-[24rem] md:h-[40rem] relative rounded-3xl overflow-hidden mt-36 md:mt-56">
+    <div className="2xl:w-3/4 w-11/12 h-[26rem] sm:h-[24rem] md:h-[40rem] relative rounded-3xl overflow-hidden mt-36 md:mt-56 flex flex-col items-center justify-center">
       <Image
-        className="object-cover rounded-3xl"
+        className="object-cover rounded-3xl -z-10"
         src="/assets/book-a-call.png"
         alt="Book a call"
         fill
       />
-      <div className="absolute w-full md:w-auto px-4 py-2 rounded-md top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-8 md:gap-16 items-center">
+      <div className="w-full md:w-auto max-w-3xl px-4 py-2 rounded-md flex flex-col gap-8 md:gap-16 items-center">
         <div className="text-4xl sm:text-5xl md:text-6xl font-semibold text-center">
-          Ready to scale your brand to{" "}
-          <span className="font-instrumentSerif italic">new heights?</span>
+          Ready to elevate your brand with expert{" "}
+          <span className="font-instrumentSerif italic">digital marketing</span>{" "}
+          solutions?
         </div>
         <span className="text-center text-sm sm:text-lg font-semibold">
-          If you want to achieve ground-breaking growth with increased sales and
-          profitability with paid ads, then you&apos;re in the right place.
+          As a creative and award-winning application development company in
+          India and a leading digital marketing agency, we specialize in helping
+          businesses thrive.
         </span>
         <Link
           href="https://calendly.com/alotavocados/30min"
