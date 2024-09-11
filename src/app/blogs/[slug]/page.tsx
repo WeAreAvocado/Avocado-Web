@@ -12,8 +12,6 @@ export async function generateStaticParams() {
   }));
 }
 
-// export const dynamic = "force-static";
-
 const BlogPostPage = async ({
   params: { slug },
 }: {
@@ -36,16 +34,16 @@ const BlogPostPage = async ({
         <span className="font-medium">Back</span>
       </Link>
       <div className="min-w-full space-y-6">
-        <h1 className="text-4xl md:text-6xl font-semibold">{data.title}</h1>
+        <h1 className="text-4xl md:text-6xl font-semibold">{data?.title}</h1>
         <p className="text-[#C6C6C6] text-medium">
-          {data.category} &#x2022; {formatDate(data.publishedAt)}
+          {data?.category} &#x2022; {formatDate(data?.publishedAt)}
         </p>
       </div>
       <Image
         height={1500}
         width={1500}
-        src={data.image}
-        alt={data.title}
+        src={data?.image}
+        alt={data?.title}
         className="rounded-lg"
       />
       <div
@@ -75,7 +73,7 @@ const BlogPostPage = async ({
         min-w-full
       "
       >
-        <MDXRemote source={content} />
+        <MDXRemote source={content ?? ""} />
       </div>
     </div>
   );

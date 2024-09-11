@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="w-[42rem] h-[30rem] flex-shrink-0 rounded-full bg-brand bg-opacity-60 filter blur-[250px]" />
       </div>
 
-      <div className="text-center w-10/12 text-2xl my-6 font-semibold">
+      {/* <div className="text-center w-10/12 text-2xl my-6 font-semibold">
         Whether you&apos;re searching for a{" "}
         <span className="font-instrumentSerif italic font-thin">
           creative marketing agency
@@ -33,7 +33,7 @@ const Footer = () => {
           online marketing
         </span>{" "}
         expertise.
-      </div>
+      </div> */}
 
       <div className=" my-8 px-6 md:my-24 md:px-16 grid grid-cols-1 md:grid-cols-2 gap-16 justify-between w-full">
         <div className="flex flex-col">
@@ -45,8 +45,15 @@ const Footer = () => {
             height={60}
             priority
           />
-          <span className="opacity-70 font-light text-md md:text-xl">
-            Creative and Award winning brand &<br /> design agencies
+          <span className="opacity-70 font-light text-md md:text-xl max-w-96">
+            Whether you&apos;re searching for a{" "}
+            <span className="font-semibold">creative marketing agency</span>, an{" "}
+            <span className="font-semibold">advertising agency near me</span>,
+            or looking to boost results through{" "}
+            <span className="font-semibold">PPC in digital marketing</span>,
+            we&apos;ve got you covered with top-notch{" "}
+            <span className="font-semibold">business consulting</span> and{" "}
+            <span className="font-semibold">online marketing</span> expertise.
           </span>
         </div>
         <div className="flex gap-12 md:gap-16 md:justify-end">

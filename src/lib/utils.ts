@@ -2,6 +2,16 @@ import fs from "fs";
 import matter from "gray-matter";
 import { globby } from "globby";
 
+export interface IBlogs {
+  slug: string;
+  content: string | undefined;
+  data:
+    | {
+        [key: string]: any;
+      }
+    | undefined;
+}
+
 export const formatDate = (date: string) => {
   if (!date.includes("T")) {
     date = `${date}T00:00:00`;
@@ -27,13 +37,14 @@ export const getBlogData = async (slug: string) => {
   }
 
   const rawContent = fs.readFileSync(filePath, "utf-8");
-  return await matter(rawContent);
+  const blogData = (await matter(rawContent)) as unknown;
+  return blogData as IBlogs;
 };
 
-export const getAllBlogs = async () => {
+export const getAllBlogs = async (): Promise<IBlogs[]> => {
   const posts = await globby(["src/app/blogs/_content/*.mdx"]);
 
-  const blogsData = await Promise.all(
+  const allBlogsData = await Promise.all(
     posts.map(async (post) => {
       const slug = post.split("/")[4].split(".")[0];
       const blogData = await getBlogData(slug);
@@ -46,7 +57,7 @@ export const getAllBlogs = async () => {
     })
   );
 
-  return blogsData;
+  return allBlogsData;
 };
 
 export const getAboutData = async () => {
@@ -56,7 +67,11 @@ export const getAboutData = async () => {
   return await matter(rawContent);
 };
 
-export const getBlogCategoryData = async (blogs: IBlogs[]) => {
+export const getBlogCategoryData = async (
+  blogs: IBlogs[]
+): Promise<{
+  [key: string]: IBlogs[];
+}> => {
   const categorizedBlogs: { [key: string]: any[] } = {};
 
   blogs.forEach((blog) => {
@@ -78,22 +93,12 @@ export const getBlogCategoryData = async (blogs: IBlogs[]) => {
   return categorizedBlogs;
 };
 
-interface IBlogs {
-  slug: string;
-  content: string | undefined;
-  data:
-    | {
-        [key: string]: any;
-      }
-    | undefined;
-}
-
 export const getLatestBlogs = async (blogs: IBlogs[]) => {
   const latestBlogs = blogs
     .sort(
       (a, b) =>
-        Number(new Date(b?.data?.publishedAt)) -
-        Number(new Date(a?.data?.publishedAt))
+        Number(new Date(b?.data?.publishedAt ?? "")) -
+        Number(new Date(a?.data?.publishedAt ?? ""))
     )
     .slice(0, 6);
 
