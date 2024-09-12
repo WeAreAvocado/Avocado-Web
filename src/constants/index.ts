@@ -10,7 +10,6 @@ import {
   WebDesignAndRedesignIcon,
   WebsiteDevelopmentIcon,
 } from "@/components/icons";
-import { HiLightningBolt } from "react-icons/hi";
 
 export const PROJECTS = [
   {
