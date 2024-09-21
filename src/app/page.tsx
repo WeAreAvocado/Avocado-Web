@@ -92,7 +92,7 @@ export default function Home() {
               Ready to{" "}
               <span className="font-instrumentSerif italic">scale</span> your
             </span>
-            <span>brand with Avocado Tech?</span>
+            <h1>brand with Avocado Tech?</h1>
           </div>
           <div className="text-md md:text-xl max-w-lg text-center text-[#FFFFFF]/60 font-extralight">
             At the forefront of digital marketing and software development, our
