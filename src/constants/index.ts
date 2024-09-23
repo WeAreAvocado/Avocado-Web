@@ -115,6 +115,10 @@ export const GRAPHIC_DESIGN = [
     name: "4",
     href: "4.png",
   },
+  {
+    name: "5",
+    href: "5.png",
+  },
 ];
 
 export const BLOG_CATEGORIES = [
