@@ -65,11 +65,11 @@ export const metadata: Metadata = {
     images: ['https://www.avocadotech.com/twitter-image.png']
   },
   alternates: {
-    canonical: '/',
+    canonical: 'https://www.avocadotech.in/',
     languages: {
       'en-US': '/en-US',
-    },
-  },
+    },
+  },
 };
 
 interface IProp {
