@@ -101,23 +101,23 @@ export const NAV_LINKS = [
 export const GRAPHIC_DESIGN = [
   {
     name: "1",
-    href: "1.png",
+    href: "1.jpg",
   },
   {
     name: "2",
-    href: "2.png",
+    href: "2.jpg",
   },
   {
     name: "3",
-    href: "3.png",
+    href: "3.jpg",
   },
   {
     name: "4",
-    href: "4.png",
+    href: "4.jpg",
   },
   {
     name: "5",
-    href: "5.png",
+    href: "5.jpg",
   },
 ];
 
