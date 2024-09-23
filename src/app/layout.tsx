@@ -56,8 +56,8 @@ export const metadata: Metadata = {
         alt: "Avocado Tech - Innovative Web Solutions"
       }
     ]
-
   },
+  
   twitter: {
     card: "summary_large_image",
     title: "Avocado Tech - Innovative Web Solutions",
