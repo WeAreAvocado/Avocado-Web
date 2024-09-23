@@ -77,7 +77,6 @@ interface IProp {
 }
 
 export default function RootLayout({ children }: IProp) {
-
   return (
     <html
       lang="en"
@@ -97,14 +96,8 @@ export default function RootLayout({ children }: IProp) {
         <Script
           strategy="lazyOnload"
           src="https://embed.tawk.to/66d85ea1ea492f34bc0da069/1i6uj3a22"
-          id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(jsonLd),
-        }}
         />
       </body>
-      <GoogleAnalytics gaId="G-RR1GW34HVV" />
     </html>
   );
 }
