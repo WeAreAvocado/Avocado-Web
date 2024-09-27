@@ -48,7 +48,7 @@ export const sendMail = async (prevState: any, formData: FormData) => {
 
 
     const { data, error } = await resend.emails.send({
-      from: 'Avocado Tech <avocado@krishnaaa.com>',
+      from: 'Avocado Tech <avocadotech.in>',
       to: ['alotavocados@gmail.com'],
       subject: `🚀 New Message from ${name} | Avocado Tech`,
       html: `
@@ -59,9 +59,7 @@ export const sendMail = async (prevState: any, formData: FormData) => {
       `,
     });
     
-    if (error) {
-      return Response.json(data);
-    }
+   
 
 
 
