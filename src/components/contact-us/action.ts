@@ -32,7 +32,6 @@ const resend = new Resend("re_PvjRpMAs_28Cn4LsjVgD93NZkoTob3oQm");
 
 
 export const sendMail = async (prevState: any, formData: FormData) => {
-  "use server";
   const { name, email, mobile, message } = Object.fromEntries(formData);
 
   const parsedData = formDataSchema.safeParse({ name, email, mobile, message });
