@@ -48,7 +48,7 @@ export const sendMail = async (prevState: any, formData: FormData) => {
 
 
     const { data } = await resend.emails.send({
-      from: 'Avocado Tech <avocadotech.in>',
+      from: 'Avocado Tech <contact@avocadotech.in>',
       to: ['alotavocados@gmail.com'],
       subject: `🚀 New Message from ${name} | Avocado Tech`,
       html: `
