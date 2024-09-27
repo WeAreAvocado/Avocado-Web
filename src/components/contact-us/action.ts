@@ -32,6 +32,7 @@ const resend = new Resend("re_PvjRpMAs_28Cn4LsjVgD93NZkoTob3oQm");
 
 
 export const sendMail = async (prevState: any, formData: FormData) => {
+  "use server";
   const { name, email, mobile, message } = Object.fromEntries(formData);
 
   const parsedData = formDataSchema.safeParse({ name, email, mobile, message });
@@ -46,7 +47,7 @@ export const sendMail = async (prevState: any, formData: FormData) => {
   try {
 
 
-    const { data, error } = await resend.emails.send({
+    const { data } = await resend.emails.send({
       from: 'Avocado Tech <avocadotech.in>',
       to: ['alotavocados@gmail.com'],
       subject: `🚀 New Message from ${name} | Avocado Tech`,
@@ -57,9 +58,6 @@ export const sendMail = async (prevState: any, formData: FormData) => {
           <p>Message:      ${message}</p>
       `,
     });
-    
-   
-
 
 
     const success = true;
@@ -75,7 +73,6 @@ export const sendMail = async (prevState: any, formData: FormData) => {
         success: false,
       };
     }
-    
   } catch (error) {
     console.log(error);
     return {
