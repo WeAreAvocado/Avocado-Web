@@ -58,6 +58,11 @@ export const sendMail = async (prevState: any, formData: FormData) => {
           <p>Message:      ${message}</p>
       `,
     });
+    
+    if (error) {
+      return Response.json(data);
+    }
+
 
 
     const success = true;
@@ -73,6 +78,7 @@ export const sendMail = async (prevState: any, formData: FormData) => {
         success: false,
       };
     }
+    
   } catch (error) {
     console.log(error);
     return {
