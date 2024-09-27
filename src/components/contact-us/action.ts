@@ -28,7 +28,7 @@ const formDataSchema = z.object({
     .min(1, { message: "Message is required" }),
 });
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend("re_PvjRpMAs_28Cn4LsjVgD93NZkoTob3oQm");
 
 
 export const sendMail = async (prevState: any, formData: FormData) => {
