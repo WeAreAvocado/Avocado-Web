@@ -32,6 +32,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 
 export const sendMail = async (prevState: any, formData: FormData) => {
+  "use server";
   const { name, email, mobile, message } = Object.fromEntries(formData);
 
   const parsedData = formDataSchema.safeParse({ name, email, mobile, message });
@@ -58,11 +59,20 @@ export const sendMail = async (prevState: any, formData: FormData) => {
       `,
     });
 
-    if (error) {
-      return Response.json({ error }, { status: 500 });
-    }
 
-    return Response.json(data);
+    const success = true;
+
+    if (success) {
+      return {
+        message: "Message sent successfully",
+        success: true,
+      };
+    } else {
+      return {
+        message: "Error sending email",
+        success: false,
+      };
+    }
   } catch (error) {
     console.log(error);
     return {
