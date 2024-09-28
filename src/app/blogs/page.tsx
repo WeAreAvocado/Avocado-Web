@@ -10,13 +10,13 @@ import Image from "next/image";
 import { BLOG_CATEGORIES } from "@/constants";
 
 const BlogPostPage = async () => {
-  // const blogs = await getAllBlogs();
-  // const latestBlogs = await getLatestBlogs(blogs);
-  // const categorizedBlogs = await getBlogCategoryData(blogs);
+  const blogs = await getAllBlogs();
+  const latestBlogs = await getLatestBlogs(blogs);
+  const categorizedBlogs = await getBlogCategoryData(blogs);
 
   // const blogs: IBlogs[] = [];
-  const latestBlogs: IBlogs[] = [];
-  const categorizedBlogs: { [key: string]: IBlogs[] } = {};
+  // const latestBlogs: IBlogs[] = [];
+  // const categorizedBlogs: { [key: string]: IBlogs[] } = {};
 
   return (
     <div className="min-h-[25rem] text-white flex flex-col items-center gap-8 max-w-screen-lg 2xl:max-w-screen-xl m-auto px-4">
