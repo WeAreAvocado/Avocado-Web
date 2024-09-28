@@ -36,7 +36,7 @@ const ContactUs = ({ isSeparatePage }: { isSeparatePage?: boolean }) => {
         <span className="font-instrumentSerif font-normal italic ">us</span>
       </span>
 
-      <div className="relative w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-4 rounded-3xl md:border md:border-[#6E6E6E] md:p-12">
+      <div className="relative overflow-hidden w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-4 rounded-3xl md:border md:border-[#6E6E6E] md:p-12">
         <div className="absolute bottom-0 md:-bottom-1/2 left-1/2 transform -translate-x-1/2 w-full scale-200 md:scale-100 md:w-10/12 lg:w-8/12 h-full z-[-1] select-none flex items-center justify-center">
           <Image
             className="object-cover h-fit w-full md:w-10/12 lg:w-11/12 animate-spin-extra-slow opacity-80"
