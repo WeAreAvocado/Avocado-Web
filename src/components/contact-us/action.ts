@@ -37,6 +37,7 @@ export const sendMail = async (prevState: any, formData: FormData) => {
 
   const parsedData = formDataSchema.safeParse({ name, email, mobile, message });
 
+
   if (parsedData.error) {
     return {
       message: "Invalid data",
@@ -45,6 +46,7 @@ export const sendMail = async (prevState: any, formData: FormData) => {
   }
 
   try {
+
 
 
     const { data } = await resend.emails.send({
@@ -81,3 +83,4 @@ export const sendMail = async (prevState: any, formData: FormData) => {
     };
   }
 };
+

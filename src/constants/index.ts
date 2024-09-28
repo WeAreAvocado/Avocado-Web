@@ -55,6 +55,7 @@ export const PROJECTS = [
   //     ],
   //   },
   // },
+  
   {
     link: "https://play.google.com/store/apps/details?id=com.avocadotech.ganesh_aarthi_app",
     name: "Ganesh Aarti",
