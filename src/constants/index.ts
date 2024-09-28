@@ -32,28 +32,29 @@ export const PROJECTS = [
     },
   },
 
-  {
-    link: "",
-    name: "City2Guide",
-    slug: "city-2-guide",
-    type: "Travel Website",
-    year: "2024",
-    description:
-      "City2Guide, a travel website designed by Avocado Tech in Mumbai, India, targets travelers aged 22-50. This UI/UX project features a minimalist, clean design, enhancing user experience. Discover sophistication and seamless navigation, crafted for modern travel enthusiasts.",
-    image: {
-      thumbnail: "thumbnail.png",
-      main: [
-        "thumbnail.png",
-        "Frame1.png",
-        "Frame2.png",
-        "Frame3.png",
-        "Frame4.png",
-        "Frame5.png",
-        "Frame6.png",
-        "Frame7.png",
-      ],
-    },
-  },
+  // {
+  //
+  //   link: "",
+  //   name: "City2Guide",
+  //   slug: "city-2-guide",
+  //   type: "Travel Website",
+  //   year: "2024",
+  //   description:
+  //     "City2Guide, a travel website designed by Avocado Tech in Mumbai, India, targets travelers aged 22-50. This UI/UX project features a minimalist, clean design, enhancing user experience. Discover sophistication and seamless navigation, crafted for modern travel enthusiasts.",
+  //   image: {
+  //     thumbnail: "thumbnail.png",
+  //     main: [
+  //       "thumbnail.png",
+  //       "Frame1.png",
+  //       "Frame2.png",
+  //       "Frame3.png",
+  //       "Frame4.png",
+  //       "Frame5.png",
+  //       "Frame6.png",
+  //       "Frame7.png",
+  //     ],
+  //   },
+  // },
   {
     link: "https://play.google.com/store/apps/details?id=com.avocadotech.ganesh_aarthi_app",
     name: "Ganesh Aarti",

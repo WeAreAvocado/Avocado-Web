@@ -1,6 +1,6 @@
 "use server";
 
-import sgMail from "@sendgrid/mail";
+import { Resend } from 'resend';
 import { z } from "zod";
 
 const formDataSchema = z.object({
@@ -28,8 +28,11 @@ const formDataSchema = z.object({
     .min(1, { message: "Message is required" }),
 });
 
+const resend = new Resend("re_PvjRpMAs_28Cn4LsjVgD93NZkoTob3oQm");
+
+
 export const sendMail = async (prevState: any, formData: FormData) => {
-  "use server";
+  
   const { name, email, mobile, message } = Object.fromEntries(formData);
 
   const parsedData = formDataSchema.safeParse({ name, email, mobile, message });
@@ -42,11 +45,11 @@ export const sendMail = async (prevState: any, formData: FormData) => {
   }
 
   try {
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
 
-    const data = {
-      from: `Avocado Tech <avocado@krishnaaa.com>`,
-      to: "alotavocados@gmail.com",
+
+    const { data } = await resend.emails.send({
+      from: 'Avocado Tech <contact@avocadotech.in>',
+      to: ['alotavocados@gmail.com'],
       subject: `🚀 New Message from ${name} | Avocado Tech`,
       html: `
           <p>Name:         ${name}</p>
@@ -54,11 +57,10 @@ export const sendMail = async (prevState: any, formData: FormData) => {
           <p>Mobile:       ${mobile}</p>
           <p>Message:      ${message}</p>
       `,
-    };
+    });
 
-    const mailRes = await sgMail.send(data);
 
-    const success = mailRes[0].statusCode === 202;
+    const success = true;
 
     if (success) {
       return {
