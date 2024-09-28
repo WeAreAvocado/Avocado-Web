@@ -37,12 +37,12 @@ const Services = ({ isSeparatePage }: { isSeparatePage?: boolean }) => {
         {SERVICES.map((service, index) => (
           <Link key={index} href={`/services/${service.slug}`}>
             <div className={`rounded-2xl flex flex-col gap-6 py-8 px-6 border border-[#6E6E6E] bg-[#0A0A0A] bg-opacity-50 w-80 h-60 group/service m-auto ${styles.element}`}>
-              <service.icon className="h-12 w-12 text-white flex-shrink-0 group-hover/service:text-[#FF4830]" />
+              <service.icon className="h-12 w-12 text-white flex-shrink-0 group-hover/service:text-[#FFFFFF]" />
               <div className="flex flex-col gap-4">
-                <span className="text-xl font-bold group-hover/service:text-[#2a2a2a]">
+                <span className="text-xl font-bold text-white group-hover/service:font-black">
                   {service.name}
                 </span>
-                <span className="w-11/12 text-white text-md">
+                <span className="w-11/12 text-[#808080] group-hover/service:text-white text-md">
                   {service.description}
                 </span>
               </div>

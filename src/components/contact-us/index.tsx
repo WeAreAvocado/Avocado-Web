@@ -43,7 +43,7 @@ const ContactUs = ({ isSeparatePage }: { isSeparatePage?: boolean }) => {
         text-xl
         "
       >
-       At AvocadoTech, we’re here to help you with all your tech needs. Whether you have a question about our services, need assistance just say hello, or want to discuss a project, feel free to reach out! 
+       At AvocadoTech, we’re here to help you with all your tech needs. <br /> Whether you have a question about our services, need assistance just say hello, or want to discuss a project, feel free to reach out! 
       </div>
 
       <div className="relative overflow-hidden w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-4 rounded-3xl md:border md:border-[#6E6E6E] md:p-12">
