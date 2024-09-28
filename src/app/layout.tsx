@@ -1,5 +1,5 @@
 import "./globals.css";
-import type { Metadata } from "next";
+import type { Metadata,Viewport } from "next";
 import { instrumentSerif, satoshiVariable } from "@/lib/fonts";
 import NavBar from "@/components/nav-bar";
 import Footer from "@/components/footer";
@@ -37,12 +37,18 @@ const jsonLd: WithContext<FAQPage> = {
   dateModified: "2023-12-28",
 };
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+}
 
 export const metadata: Metadata = {
   title: "Avocado Tech | Premier IT & Digital Marketing Solutions in Mumbai",
   description: "Avocado Tech is a premier IT Service and IT Consultant Company based in Mumbai, India. We specialize in a wide array of services including Digital Marketing, Web Design & Redesign,creative marketing agency, advertising agency near me, ppc in digital marketing, online marketing company. Our experienced team delivers customized, high-quality solutions designed to drive business growth and enhance digital experiences. At Avocado Tech, we focus on providing exceptional value and results, making us your ideal partner for innovative technology solutions.",
   keywords: "creative marketing agency, advertising agency near me, ppc in digital marketing, online marketing company, application devlelopment company at india, digital marketing solutions, Business Consulting, digital marketing agency, Digital Marketing services",
-  viewport: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no",
+  viewport: "width=device-width, initial-scale=1.0",
   openGraph: {
     type: "website",
     url: "https://www.avocadotech.com",
