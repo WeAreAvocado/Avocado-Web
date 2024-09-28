@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SERVICES } from "@/constants";
+import styles from "@/components/services/service.module.css"
 
 const Services = ({ isSeparatePage }: { isSeparatePage?: boolean }) => {
   return (
@@ -35,13 +36,13 @@ const Services = ({ isSeparatePage }: { isSeparatePage?: boolean }) => {
       <div className="gap-8 grid md:grid-cols-2 xl:grid-cols-3 w-10/12 m-auto px-4 justify-center">
         {SERVICES.map((service, index) => (
           <Link key={index} href={`/services/${service.slug}`}>
-            <div className="rounded-2xl flex flex-col gap-6 py-8 px-6 border border-[#6E6E6E] bg-[#0A0A0A] bg-opacity-50 w-80 h-60 group/service m-auto">
+            <div className={`rounded-2xl flex flex-col gap-6 py-8 px-6 border border-[#6E6E6E] bg-[#0A0A0A] bg-opacity-50 w-80 h-60 group/service m-auto ${styles.element}`}>
               <service.icon className="h-12 w-12 text-white flex-shrink-0 group-hover/service:text-[#FF4830]" />
               <div className="flex flex-col gap-4">
-                <span className="text-xl font-semibold group-hover/service:text-[#FF4830]">
+                <span className="text-xl font-bold group-hover/service:text-[#2a2a2a]">
                   {service.name}
                 </span>
-                <span className="w-11/12 text-[#6E6E6E] text-md">
+                <span className="w-11/12 text-white text-md">
                   {service.description}
                 </span>
               </div>

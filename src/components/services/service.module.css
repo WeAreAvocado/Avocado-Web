@@ -1,0 +1,12 @@
+.element:hover{
+    transform: scale(1.1) translateY(-10px);
+    -webkit-transform: scale(1.1) translateY(-10px);
+    -moz-transform: scale(1.1) translateY(-10px);
+    -ms-transform: scale(1.1) translateY(-10px);
+    -o-transform: scale(1.1) translateY(-10px);
+    background: linear-gradient(to right, rgb(74, 86, 18), rgb(141 152 83)); 
+}
+.element{
+    transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    font-weight: bold;
+}

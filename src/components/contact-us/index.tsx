@@ -23,7 +23,7 @@ const ContactUs = ({ isSeparatePage }: { isSeparatePage?: boolean }) => {
   return (
     <div
       id="contact-us"
-      className="flex flex-col items-center gap-16 w-full pt-36 md:pt-56 px-4"
+      className="flex flex-col items-center gap-12 w-full pt-36 md:pt-56 px-4"
     >
       {!isSeparatePage && (
         <button className="rounded-full font-bold px-6 py-2 text-center md:px-10 md:py-3 text-sm md:text-lg border border-white">
@@ -35,6 +35,16 @@ const ContactUs = ({ isSeparatePage }: { isSeparatePage?: boolean }) => {
         Reach out to{" "}
         <span className="font-instrumentSerif font-normal italic ">us</span>
       </span>
+
+      <div
+        className="min-w-full mt-5 md:mt-5 mb-5 px-10
+        text-white
+        text-center
+        text-xl
+        "
+      >
+       At AvocadoTech, we’re here to help you with all your tech needs. Whether you have a question about our services, need assistance just say hello, or want to discuss a project, feel free to reach out! 
+      </div>
 
       <div className="relative overflow-hidden w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-4 rounded-3xl md:border md:border-[#6E6E6E] md:p-12">
         <div className="absolute bottom-0 md:-bottom-1/2 left-1/2 transform -translate-x-1/2 w-full scale-200 md:scale-100 md:w-10/12 lg:w-8/12 h-full z-[-1] select-none flex items-center justify-center">
