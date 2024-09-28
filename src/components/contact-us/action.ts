@@ -75,6 +75,7 @@ export const sendMail = async (prevState: any, formData: FormData) => {
         success: false,
       };
     }
+    
   } catch (error) {
     console.log(error);
     return {
