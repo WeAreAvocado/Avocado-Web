@@ -26,7 +26,7 @@ const config: Config = {
         },
       },
       screens: {
-        xs: "480px",
+        xs: "320px",
       },
       fontFamily: {
         satoshiVariable: ["var(--font-satoshi-variable)"],
