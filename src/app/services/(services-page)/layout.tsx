@@ -8,13 +8,6 @@ interface IProp {
 export default function RootLayout({ children }: IProp) {
   return (
     <div className="min-h-[25rem] text-white flex flex-col items-center gap-8 max-w-screen-lg 2xl:max-w-screen-xl m-auto px-4">
-      <Link
-        href="/services"
-        className="flex items-center gap-2 hover:underline w-full mt-8 md:mt-44"
-      >
-        <IoArrowBack className="h-5 w-5 text-brand" />
-        <span className="font-medium">Back</span>
-      </Link>
       <div
         className="
         prose 
@@ -42,6 +35,13 @@ export default function RootLayout({ children }: IProp) {
         min-w-full
       "
       >
+      <Link
+        href="/services"
+        className="flex items-center gap-2 hover:underline w-full mt-18 xs:mt-24"
+      >
+        <IoArrowBack className="h-5 w-5 text-brand" />
+        <span className="font-medium">Back</span>
+      </Link>
         {children}
       </div>
     </div>
